@@ -10,7 +10,7 @@ add process p p > chargino n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
 add process p p > n2 n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
 add process p p > n2 n2 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
 add process p p > chargino chargino j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
-output ../results/xSection/n2_100_ch1_75_n1_50 -f
+output /home/aflorez/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/ -f
 launch 
 /home/aflorez/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/Cards/param_card.dat
 /home/aflorez/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/Cards/run_card.dat
