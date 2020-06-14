@@ -1,0 +1,356 @@
+Script started on dom 14 jun 2020 18:58:51 EDT
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.6.3.2               2018-06-22         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../../../usr/local/HEP/MG5_aMC_v2_6_3_2/input/mg5_configuration.txt 
+set fastjet to /usr/local/HEP/FASTJET3.1.2/bin/fastjet-config
+set lhapdf to /usr/local/HEP/MG5_aMC_v2_6_3_2/HEPTools/lhapdf6/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /home/aflorez/genSignalAndXSection/xSection/currentRun/mgFile.mg5
+The import format was not given, so we guess it as command
+import model MSSM_SLHA2
+INFO: load particles 
+INFO: load vertices 
+INFO: Restrict model MSSM_SLHA2 with file ../../../usr/local/HEP/MG5_aMC_v2_6_3_2/models/MSSM_SLHA2/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Detect SLHA2 format. keeping restricted parameter in the param_card 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ go ul cl t1 ur cr t2 dl sl b1 dr sr b2 ul~ cl~ t1~ ur~ cr~ t2~ dl~ sl~ b1~ dr~ sr~ b2~ t b t~ b~ z w+ h01 h2 h3 h+ sve svm svt el- mul- ta1- er- mur- ta2- w- h- sve~ svm~ svt~ el+ mul+ ta1+ er+ mur+ ta2+ n1 n2 n3 n4 x1+ x2+ ta- x1- x2- ta+
+define lepton = e+ e- mu+ mu- ta+ ta-
+Defined multiparticle lepton = e- mu- e+ mu+ ta- ta+
+define neutrino = ve vm vt ve~ vm~ vt~
+Defined multiparticle neutrino = ve vm vt ve~ vm~ vt~
+define chargino = x1+ x1-
+Defined multiparticle chargino = x1+ x1-
+define colored = go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl~ dr~ ul~ ur~ sl~ sr~ cl~ cr~ b1~ b2~ t1~ t2~
+Defined multiparticle colored = go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl~ dr~ ul~ ur~ sl~ sr~ cl~ cr~ b1~ b2~ t1~ t2~
+define p = u d u~ d~
+Defined multiparticle p = u d u~ d~
+define j = p
+Defined multiparticle j = u d u~ d~
+generate p p > chargino n2 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+INFO: Trying process: u u > x1+ n2 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u d > x1+ n2 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u d > x1- n2 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u u~ > x1+ n2 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u u~ > x1- n2 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u d~ > x1+ n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u d~ > x1+ n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Process d u > x1+ n2 d d added to mirror process u d > x1+ n2 d d 
+INFO: Process d u > x1- n2 u u added to mirror process u d > x1- n2 u u 
+INFO: Trying process: d d > x1- n2 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+INFO: Trying process: d u~ > x1- n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d u~ > x1- n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d d~ > x1+ n2 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d d~ > x1- n2 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 8 diagrams 
+INFO: Process u~ u > x1+ n2 d u~ added to mirror process u u~ > x1+ n2 d u~ 
+INFO: Process u~ u > x1- n2 u d~ added to mirror process u u~ > x1- n2 u d~ 
+INFO: Process u~ d > x1- n2 u u~ added to mirror process d u~ > x1- n2 u u~ 
+INFO: Process u~ d > x1- n2 d d~ added to mirror process d u~ > x1- n2 d d~ 
+INFO: Trying process: u~ u~ > x1- n2 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u~ d~ > x1+ n2 u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u~ d~ > x1- n2 d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+INFO: Process d~ u > x1+ n2 u u~ added to mirror process u d~ > x1+ n2 u u~ 
+INFO: Process d~ u > x1+ n2 d d~ added to mirror process u d~ > x1+ n2 d d~ 
+INFO: Process d~ d > x1+ n2 d u~ added to mirror process d d~ > x1+ n2 d u~ 
+INFO: Process d~ d > x1- n2 u d~ added to mirror process d d~ > x1- n2 u d~ 
+INFO: Process d~ u~ > x1+ n2 u~ u~ added to mirror process u~ d~ > x1+ n2 u~ u~ 
+INFO: Process d~ u~ > x1- n2 d~ d~ added to mirror process u~ d~ > x1- n2 d~ d~ 
+INFO: Trying process: d~ d~ > x1+ n2 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1  
+INFO: Process has 16 diagrams 
+16 processes with 192 diagrams generated in 1.216 s
+Total: 16 processes with 192 diagrams
+add process p p > chargino n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+INFO: Trying process: u u > x1+ n1 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u d > x1+ n1 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u d > x1- n1 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u u~ > x1+ n1 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u u~ > x1- n1 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u d~ > x1+ n1 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u d~ > x1+ n1 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Process d u > x1+ n1 d d added to mirror process u d > x1+ n1 d d 
+INFO: Process d u > x1- n1 u u added to mirror process u d > x1- n1 u u 
+INFO: Trying process: d d > x1- n1 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+INFO: Trying process: d u~ > x1- n1 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d u~ > x1- n1 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d d~ > x1+ n1 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d d~ > x1- n1 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 8 diagrams 
+INFO: Process u~ u > x1+ n1 d u~ added to mirror process u u~ > x1+ n1 d u~ 
+INFO: Process u~ u > x1- n1 u d~ added to mirror process u u~ > x1- n1 u d~ 
+INFO: Process u~ d > x1- n1 u u~ added to mirror process d u~ > x1- n1 u u~ 
+INFO: Process u~ d > x1- n1 d d~ added to mirror process d u~ > x1- n1 d d~ 
+INFO: Trying process: u~ u~ > x1- n1 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u~ d~ > x1+ n1 u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u~ d~ > x1- n1 d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+INFO: Process d~ u > x1+ n1 u u~ added to mirror process u d~ > x1+ n1 u u~ 
+INFO: Process d~ u > x1+ n1 d d~ added to mirror process u d~ > x1+ n1 d d~ 
+INFO: Process d~ d > x1+ n1 d u~ added to mirror process d d~ > x1+ n1 d u~ 
+INFO: Process d~ d > x1- n1 u d~ added to mirror process d d~ > x1- n1 u d~ 
+INFO: Process d~ u~ > x1+ n1 u~ u~ added to mirror process u~ d~ > x1+ n1 u~ u~ 
+INFO: Process d~ u~ > x1- n1 d~ d~ added to mirror process u~ d~ > x1- n1 d~ d~ 
+INFO: Trying process: d~ d~ > x1+ n1 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2  
+INFO: Process has 16 diagrams 
+16 processes with 192 diagrams generated in 1.110 s
+Total: 32 processes with 384 diagrams
+add process p p > n2 n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+INFO: Trying process: u u > n2 n1 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u d > n2 n1 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 12 diagrams 
+INFO: Trying process: u u~ > n2 n1 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u u~ > n2 n1 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 4 diagrams 
+INFO: Trying process: u d~ > n2 n1 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 8 diagrams 
+INFO: Process d u > n2 n1 u d added to mirror process u d > n2 n1 u d 
+INFO: Trying process: d d > n2 n1 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 16 diagrams 
+INFO: Trying process: d u~ > n2 n1 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d d~ > n2 n1 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 4 diagrams 
+INFO: Trying process: d d~ > n2 n1 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 8 diagrams 
+INFO: Process u~ u > n2 n1 u u~ added to mirror process u u~ > n2 n1 u u~ 
+INFO: Process u~ u > n2 n1 d d~ added to mirror process u u~ > n2 n1 d d~ 
+INFO: Process u~ d > n2 n1 d u~ added to mirror process d u~ > n2 n1 d u~ 
+INFO: Trying process: u~ u~ > n2 n1 u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u~ d~ > n2 n1 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 12 diagrams 
+INFO: Process d~ u > n2 n1 u d~ added to mirror process u d~ > n2 n1 u d~ 
+INFO: Process d~ d > n2 n1 u u~ added to mirror process d d~ > n2 n1 u u~ 
+INFO: Process d~ d > n2 n1 d d~ added to mirror process d d~ > n2 n1 d d~ 
+INFO: Process d~ u~ > n2 n1 u~ d~ added to mirror process u~ d~ > n2 n1 u~ d~ 
+INFO: Trying process: d~ d~ > n2 n1 d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @3  
+INFO: Process has 16 diagrams 
+12 processes with 128 diagrams generated in 1.167 s
+Total: 44 processes with 512 diagrams
+add process p p > n2 n2 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+INFO: Trying process: u u > n2 n2 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u d > n2 n2 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 12 diagrams 
+INFO: Trying process: u u~ > n2 n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u u~ > n2 n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 4 diagrams 
+INFO: Trying process: u d~ > n2 n2 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 8 diagrams 
+INFO: Process d u > n2 n2 u d added to mirror process u d > n2 n2 u d 
+INFO: Trying process: d d > n2 n2 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 16 diagrams 
+INFO: Trying process: d u~ > n2 n2 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d d~ > n2 n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 4 diagrams 
+INFO: Trying process: d d~ > n2 n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 8 diagrams 
+INFO: Process u~ u > n2 n2 u u~ added to mirror process u u~ > n2 n2 u u~ 
+INFO: Process u~ u > n2 n2 d d~ added to mirror process u u~ > n2 n2 d d~ 
+INFO: Process u~ d > n2 n2 d u~ added to mirror process d u~ > n2 n2 d u~ 
+INFO: Trying process: u~ u~ > n2 n2 u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u~ d~ > n2 n2 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 12 diagrams 
+INFO: Process d~ u > n2 n2 u d~ added to mirror process u d~ > n2 n2 u d~ 
+INFO: Process d~ d > n2 n2 u u~ added to mirror process d d~ > n2 n2 u u~ 
+INFO: Process d~ d > n2 n2 d d~ added to mirror process d d~ > n2 n2 d d~ 
+INFO: Process d~ u~ > n2 n2 u~ d~ added to mirror process u~ d~ > n2 n2 u~ d~ 
+INFO: Trying process: d~ d~ > n2 n2 d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @4  
+INFO: Process has 16 diagrams 
+12 processes with 128 diagrams generated in 1.198 s
+Total: 56 processes with 640 diagrams
+add process p p > chargino chargino j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+INFO: Trying process: u u > x1+ x1+ d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u u > x1+ x1- u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 32 diagrams 
+INFO: Trying process: u d > x1+ x1- u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 20 diagrams 
+INFO: Trying process: u u~ > x1+ x1- u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u u~ > x1+ x1- d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 4 diagrams 
+INFO: Trying process: u d~ > x1+ x1+ d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 8 diagrams 
+INFO: Trying process: u d~ > x1+ x1- u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Process d u > x1+ x1- u d added to mirror process u d > x1+ x1- u d 
+INFO: Trying process: d d > x1+ x1- d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 32 diagrams 
+INFO: Trying process: d d > x1- x1- u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Trying process: d u~ > x1+ x1- d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Trying process: d u~ > x1- x1- u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 8 diagrams 
+INFO: Trying process: d d~ > x1+ x1- u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 4 diagrams 
+INFO: Trying process: d d~ > x1+ x1- d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Process u~ u > x1+ x1- u u~ added to mirror process u u~ > x1+ x1- u u~ 
+INFO: Process u~ u > x1+ x1- d d~ added to mirror process u u~ > x1+ x1- d d~ 
+INFO: Process u~ d > x1+ x1- d u~ added to mirror process d u~ > x1+ x1- d u~ 
+INFO: Process u~ d > x1- x1- u d~ added to mirror process d u~ > x1- x1- u d~ 
+INFO: Trying process: u~ u~ > x1+ x1- u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 32 diagrams 
+INFO: Trying process: u~ u~ > x1- x1- d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Trying process: u~ d~ > x1+ x1- u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 20 diagrams 
+INFO: Process d~ u > x1+ x1+ d u~ added to mirror process u d~ > x1+ x1+ d u~ 
+INFO: Process d~ u > x1+ x1- u d~ added to mirror process u d~ > x1+ x1- u d~ 
+INFO: Process d~ d > x1+ x1- u u~ added to mirror process d d~ > x1+ x1- u u~ 
+INFO: Process d~ d > x1+ x1- d d~ added to mirror process d d~ > x1+ x1- d d~ 
+INFO: Process d~ u~ > x1+ x1- u~ d~ added to mirror process u~ d~ > x1+ x1- u~ d~ 
+INFO: Trying process: d~ d~ > x1+ x1+ u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 16 diagrams 
+INFO: Trying process: d~ d~ > x1+ x1- d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5  
+INFO: Process has 32 diagrams 
+18 processes with 320 diagrams generated in 1.653 s
+Total: 74 processes with 960 diagrams
+output /home/aflorez/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/ -f
+INFO: initialize a new directory: n2_100_ch1_75_n1_50 
+INFO: remove old information in n2_100_ch1_75_n1_50 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: u u > x1+ x1- u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u u > x1+ x1- u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d d > x1+ x1- d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d d > x1+ x1- d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u~ u~ > x1+ x1- u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u~ u~ > x1+ x1- u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d~ d~ > x1+ x1- d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d~ d~ > x1+ x1- d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u d > x1+ x1- u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u d > x1+ x1- u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u~ d~ > x1+ x1- u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u~ d~ > x1+ x1- u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u u > x1+ x1+ d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u u > x1+ x1+ d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u u~ > x1+ x1- u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u u~ > x1+ x1- u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u d~ > x1+ x1- u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: u d~ > x1+ x1- u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d d > x1- x1- u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d d > x1- x1- u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d u~ > x1+ x1- d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d u~ > x1+ x1- d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d d~ > x1+ x1- d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d d~ > x1+ x1- d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u~ u~ > x1- x1- d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u~ u~ > x1- x1- d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d~ d~ > x1+ x1+ u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d~ d~ > x1+ x1+ u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u d~ > x1+ x1+ d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u d~ > x1+ x1+ d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d u~ > x1- x1- u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d u~ > x1- x1- u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u u~ > x1+ x1- d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Processing color information for process: u u~ > x1+ x1- d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: d d~ > x1+ x1- u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Reusing existing color information for process: d d~ > x1+ x1- u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @5 
+INFO: Generating Helas calls for process: u u > x1+ n2 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Processing color information for process: u u > x1+ n2 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u d > x1+ n2 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: u d > x1+ n2 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u d > x1- n2 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: u d > x1- n2 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: d d > x1- n2 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: d d > x1- n2 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u~ u~ > x1- n2 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Processing color information for process: u~ u~ > x1- n2 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u~ d~ > x1+ n2 u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: u~ d~ > x1+ n2 u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u~ d~ > x1- n2 d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: u~ d~ > x1- n2 d~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: d~ d~ > x1+ n2 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: d~ d~ > x1+ n2 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u u~ > x1+ n2 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Processing color information for process: u u~ > x1+ n2 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u u~ > x1- n2 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: u u~ > x1- n2 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u d~ > x1+ n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: u d~ > x1+ n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u d~ > x1+ n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: u d~ > x1+ n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: d u~ > x1- n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: d u~ > x1- n2 u u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: d u~ > x1- n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: d u~ > x1- n2 d d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: d d~ > x1+ n2 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: d d~ > x1+ n2 d u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: d d~ > x1- n2 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Reusing existing color information for process: d d~ > x1- n2 u d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @1 
+INFO: Generating Helas calls for process: u u > x1+ n1 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Processing color information for process: u u > x1+ n1 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Generating Helas calls for process: u d > x1+ n1 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Reusing existing color information for process: u d > x1+ n1 d d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Generating Helas calls for process: u d > x1- n1 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Reusing existing color information for process: u d > x1- n1 u u QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Generating Helas calls for process: d d > x1- n1 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Reusing existing color information for process: d d > x1- n1 u d QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Generating Helas calls for process: u~ u~ > x1- n1 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Processing color information for process: u~ u~ > x1- n1 u~ d~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1 t2 @2 
+INFO: Generating Helas calls for process: u~ d~ > x1+ n1 u~ u~ QCD=0 $$ w+ w- z a h01 h2 h3 h+ / go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl dr ul ur sl sr cl cr b1 b2 t1
