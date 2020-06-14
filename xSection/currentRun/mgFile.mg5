@@ -10,7 +10,9 @@ add process p p > chargino n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
 add process p p > n2 n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
 add process p p > n2 n2 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
 add process p p > chargino chargino j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
-output /home/aflorez/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/ -f
-launch 
-/home/aflorez/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/Cards/param_card.dat
-/home/aflorez/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/Cards/run_card.dat
+output /home/aflorez/genSignalAndXSection/results/xSection/n2_400_ch1_385_n1_370/ -f
+launch /home/aflorez/genSignalAndXSection/results/xSection/n2_400_ch1_385_n1_370/
+set mneu1 370
+set mneu2 400
+set mch1 385
+set nevents 1000
