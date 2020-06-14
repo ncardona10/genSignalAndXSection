@@ -1,0 +1,13 @@
+import model MSSM_SLHA2
+define lepton = e+ e- mu+ mu- ta+ ta-
+define neutrino = ve vm vt ve~ vm~ vt~
+define chargino = x1+ x1-
+define colored = go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl~ dr~ ul~ ur~ sl~ sr~ cl~ cr~ b1~ b2~ t1~ t2~
+define p = u d u~ d~
+define j = p
+generate p p > chargino n2 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+add process p p > chargino n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+add process p p > n2 n1 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+add process p p > n2 n2 j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+add process p p > chargino chargino j j $$ w+ w- z a h01 h2 h3 h+ / colored QCD=0
+output n2_100_ch1_75_n1_50 -f
