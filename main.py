@@ -16,4 +16,4 @@ for index, row in data.iterrows():
     else:
         print("already calculated xsections for: n2={}, ch1={} and n1 = {}".format(row['n2'], row['ch1'], row['n1']))
 
-    break
+    

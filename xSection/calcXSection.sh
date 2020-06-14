@@ -42,6 +42,10 @@ echo "${outputFolder}Cards/run_card.dat" >> ${currentFolder}currentRun/mgFile.mg
 #log the output for post processing
 echo "running mg5_aMC ${currentFolder}currentRun/mgFile.mg5"
 script -c "mg5_aMC ${currentFolder}currentRun/mgFile.mg5" -q ${currentFolder}logXSection.txt
+
+# remove files from output folder. They are too heavy 
+rm -rf ${outputFolder}/*
+
 cp ${currentFolder}logXSection.txt "${outputFolder}xsectionLog.txt"
 
 # get cross section values
