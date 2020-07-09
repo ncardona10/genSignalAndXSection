@@ -254,7 +254,7 @@
 # WBF cuts                                                           *
 #*********************************************************************
  0.0   = xetamin ! minimum rapidity for two jets in the WBF case  
- 3.8   = deltaeta ! minimum rapidity for two jets in the WBF case 
+ 0.0   = deltaeta ! minimum rapidity for two jets in the WBF case 
 #***********************************************************************
 # Turn on either the ktdurham or ptlund cut to activate                *
 # CKKW(L) merging with Pythia8 [arXiv:1410.3012, arXiv:1109.4829]      *
