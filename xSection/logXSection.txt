@@ -1,0 +1,2448 @@
+Script started on 2020-07-09 22:05:28+00:00 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="105" LINES="56"]
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.3.py3             2020-06-28         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../Software/MG5_aMC_v2_7_3_py3/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+None does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+import /home/adminuniandes/genSignalAndXSection/xSection/currentRun/mgFile.mg5
+The import format was not given, so we guess it as command
+import model MSSM_SLHA2
+INFO: Restrict model MSSM_SLHA2 with file ../Software/MG5_aMC_v2_7_3_py3/models/MSSM_SLHA2/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Detect SLHA2 format. keeping restricted parameter in the param_card 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ go ul cl t1 ur cr t2 dl sl b1 dr sr b2 ul~ cl~ t1~ ur~ cr~ t2~ dl~ sl~ b1~ dr~ sr~ b2~ t b t~ b~ z w+ h01 h2 h3 h+ sve svm svt el- mul- ta1- er- mur- ta2- w- h- sve~ svm~ svt~ el+ mul+ ta1+ er+ mur+ ta2+ n1 n2 n3 n4 x1+ x2+ ta- x1- x2- ta+
+define chargino = x1+ x1-
+Defined multiparticle chargino = x1+ x1-
+generate p p > chargino n2 j j QCD=0
+INFO: Trying process: g g > x1+ n2 d u~ QCD=0 @1  
+INFO: Trying process: g g > x1+ n2 d c~ QCD=0 @1  
+INFO: Trying process: g g > x1+ n2 s u~ QCD=0 @1  
+INFO: Trying process: g g > x1+ n2 s c~ QCD=0 @1  
+INFO: Trying process: g g > x1- n2 u d~ QCD=0 @1  
+INFO: Trying process: g g > x1- n2 u s~ QCD=0 @1  
+INFO: Trying process: g g > x1- n2 c d~ QCD=0 @1  
+INFO: Trying process: g g > x1- n2 c s~ QCD=0 @1  
+INFO: Trying process: u u > x1+ n2 u d QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Trying process: u u > x1+ n2 u s QCD=0 @1  
+INFO: Trying process: u u > x1+ n2 c d QCD=0 @1  
+INFO: Trying process: u u > x1+ n2 c s QCD=0 @1  
+INFO: Trying process: u c > x1+ n2 u d QCD=0 @1  
+INFO: Trying process: u c > x1+ n2 u s QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u c > x1+ n2 c d QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u c > x1+ n2 c s QCD=0 @1  
+INFO: Trying process: u d > x1+ n2 d d QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Trying process: u d > x1+ n2 d s QCD=0 @1  
+INFO: Trying process: u d > x1+ n2 s s QCD=0 @1  
+INFO: Trying process: u d > x1- n2 u u QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Trying process: u d > x1- n2 u c QCD=0 @1  
+INFO: Trying process: u d > x1- n2 c c QCD=0 @1  
+INFO: Trying process: u s > x1+ n2 d d QCD=0 @1  
+INFO: Trying process: u s > x1+ n2 d s QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u s > x1+ n2 s s QCD=0 @1  
+INFO: Trying process: u s > x1- n2 u u QCD=0 @1  
+INFO: Trying process: u s > x1- n2 u c QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u s > x1- n2 c c QCD=0 @1  
+INFO: Crossed process found for u u~ > x1+ n2 d u~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1+ n2 s c~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1- n2 u d~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1- n2 c s~, reuse diagrams. 
+INFO: Crossed process found for u c~ > x1+ n2 d c~, reuse diagrams. 
+INFO: Crossed process found for u c~ > x1- n2 u s~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n2 u u~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n2 c c~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n2 d d~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n2 s s~, reuse diagrams. 
+INFO: Crossed process found for u s~ > x1+ n2 u c~, reuse diagrams. 
+INFO: Crossed process found for u s~ > x1+ n2 d s~, reuse diagrams. 
+INFO: Process c u > x1+ n2 u s added to mirror process u c > x1+ n2 u s 
+INFO: Process c u > x1+ n2 c d added to mirror process u c > x1+ n2 c d 
+INFO: Trying process: c c > x1+ n2 u d QCD=0 @1  
+INFO: Trying process: c c > x1+ n2 u s QCD=0 @1  
+INFO: Trying process: c c > x1+ n2 c d QCD=0 @1  
+INFO: Trying process: c c > x1+ n2 c s QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Trying process: c d > x1+ n2 d d QCD=0 @1  
+INFO: Trying process: c d > x1+ n2 d s QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: c d > x1+ n2 s s QCD=0 @1  
+INFO: Trying process: c d > x1- n2 u u QCD=0 @1  
+INFO: Trying process: c d > x1- n2 u c QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: c d > x1- n2 c c QCD=0 @1  
+INFO: Trying process: c s > x1+ n2 d d QCD=0 @1  
+INFO: Trying process: c s > x1+ n2 d s QCD=0 @1  
+INFO: Trying process: c s > x1+ n2 s s QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Trying process: c s > x1- n2 u u QCD=0 @1  
+INFO: Trying process: c s > x1- n2 u c QCD=0 @1  
+INFO: Trying process: c s > x1- n2 c c QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Crossed process found for c u~ > x1+ n2 s u~, reuse diagrams. 
+INFO: Crossed process found for c u~ > x1- n2 c d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ n2 d u~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ n2 s c~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1- n2 u d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1- n2 c s~, reuse diagrams. 
+INFO: Crossed process found for c d~ > x1+ n2 c u~, reuse diagrams. 
+INFO: Crossed process found for c d~ > x1+ n2 s d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n2 u u~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n2 c c~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n2 d d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n2 s s~, reuse diagrams. 
+INFO: Process d u > x1+ n2 d d added to mirror process u d > x1+ n2 d d 
+INFO: Process d u > x1- n2 u u added to mirror process u d > x1- n2 u u 
+INFO: Process d c > x1+ n2 d s added to mirror process c d > x1+ n2 d s 
+INFO: Process d c > x1- n2 u c added to mirror process c d > x1- n2 u c 
+INFO: Trying process: d d > x1- n2 u d QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Trying process: d d > x1- n2 u s QCD=0 @1  
+INFO: Trying process: d d > x1- n2 c d QCD=0 @1  
+INFO: Trying process: d d > x1- n2 c s QCD=0 @1  
+INFO: Trying process: d s > x1- n2 u d QCD=0 @1  
+INFO: Trying process: d s > x1- n2 u s QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: d s > x1- n2 c d QCD=0 @1  
+INFO: Process has 100 diagrams 
+INFO: Trying process: d s > x1- n2 c s QCD=0 @1  
+INFO: Crossed process found for d u~ > x1- n2 u u~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- n2 c c~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- n2 d d~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- n2 s s~, reuse diagrams. 
+INFO: Crossed process found for d c~ > x1- n2 u c~, reuse diagrams. 
+INFO: Crossed process found for d c~ > x1- n2 d s~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ n2 d u~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ n2 s c~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1- n2 u d~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1- n2 c s~, reuse diagrams. 
+INFO: Crossed process found for d s~ > x1+ n2 d c~, reuse diagrams. 
+INFO: Crossed process found for d s~ > x1- n2 u s~, reuse diagrams. 
+INFO: Process s u > x1+ n2 d s added to mirror process u s > x1+ n2 d s 
+INFO: Process s u > x1- n2 u c added to mirror process u s > x1- n2 u c 
+INFO: Process s c > x1+ n2 s s added to mirror process c s > x1+ n2 s s 
+INFO: Process s c > x1- n2 c c added to mirror process c s > x1- n2 c c 
+INFO: Process s d > x1- n2 u s added to mirror process d s > x1- n2 u s 
+INFO: Process s d > x1- n2 c d added to mirror process d s > x1- n2 c d 
+INFO: Trying process: s s > x1- n2 u d QCD=0 @1  
+INFO: Trying process: s s > x1- n2 u s QCD=0 @1  
+INFO: Trying process: s s > x1- n2 c d QCD=0 @1  
+INFO: Trying process: s s > x1- n2 c s QCD=0 @1  
+INFO: Process has 200 diagrams 
+INFO: Crossed process found for s u~ > x1- n2 c u~, reuse diagrams. 
+INFO: Crossed process found for s u~ > x1- n2 s d~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n2 u u~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n2 c c~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n2 d d~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n2 s s~, reuse diagrams. 
+INFO: Crossed process found for s d~ > x1+ n2 s u~, reuse diagrams. 
+INFO: Crossed process found for s d~ > x1- n2 c d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ n2 d u~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ n2 s c~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1- n2 u d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1- n2 c s~, reuse diagrams. 
+INFO: Process u~ u > x1+ n2 d u~ added to mirror process u u~ > x1+ n2 d u~ 
+INFO: Process u~ u > x1+ n2 s c~ added to mirror process u u~ > x1+ n2 s c~ 
+INFO: Process u~ u > x1- n2 u d~ added to mirror process u u~ > x1- n2 u d~ 
+INFO: Process u~ u > x1- n2 c s~ added to mirror process u u~ > x1- n2 c s~ 
+INFO: Process u~ c > x1+ n2 s u~ added to mirror process c u~ > x1+ n2 s u~ 
+INFO: Process u~ c > x1- n2 c d~ added to mirror process c u~ > x1- n2 c d~ 
+INFO: Process u~ d > x1- n2 u u~ added to mirror process d u~ > x1- n2 u u~ 
+INFO: Process u~ d > x1- n2 c c~ added to mirror process d u~ > x1- n2 c c~ 
+INFO: Process u~ d > x1- n2 d d~ added to mirror process d u~ > x1- n2 d d~ 
+INFO: Process u~ d > x1- n2 s s~ added to mirror process d u~ > x1- n2 s s~ 
+INFO: Process u~ s > x1- n2 c u~ added to mirror process s u~ > x1- n2 c u~ 
+INFO: Process u~ s > x1- n2 s d~ added to mirror process s u~ > x1- n2 s d~ 
+INFO: Crossed process found for u~ u~ > x1- n2 u~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > x1- n2 u~ s~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > x1- n2 c~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > x1+ n2 u~ u~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > x1- n2 d~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > x1+ n2 u~ c~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > x1- n2 d~ s~, reuse diagrams. 
+INFO: Process c~ u > x1+ n2 d c~ added to mirror process u c~ > x1+ n2 d c~ 
+INFO: Process c~ u > x1- n2 u s~ added to mirror process u c~ > x1- n2 u s~ 
+INFO: Process c~ c > x1+ n2 d u~ added to mirror process c c~ > x1+ n2 d u~ 
+INFO: Process c~ c > x1+ n2 s c~ added to mirror process c c~ > x1+ n2 s c~ 
+INFO: Process c~ c > x1- n2 u d~ added to mirror process c c~ > x1- n2 u d~ 
+INFO: Process c~ c > x1- n2 c s~ added to mirror process c c~ > x1- n2 c s~ 
+INFO: Process c~ d > x1- n2 u c~ added to mirror process d c~ > x1- n2 u c~ 
+INFO: Process c~ d > x1- n2 d s~ added to mirror process d c~ > x1- n2 d s~ 
+INFO: Process c~ s > x1- n2 u u~ added to mirror process s c~ > x1- n2 u u~ 
+INFO: Process c~ s > x1- n2 c c~ added to mirror process s c~ > x1- n2 c c~ 
+INFO: Process c~ s > x1- n2 d d~ added to mirror process s c~ > x1- n2 d d~ 
+INFO: Process c~ s > x1- n2 s s~ added to mirror process s c~ > x1- n2 s s~ 
+INFO: Process c~ u~ > x1- n2 u~ s~ added to mirror process u~ c~ > x1- n2 u~ s~ 
+INFO: Process c~ u~ > x1- n2 c~ d~ added to mirror process u~ c~ > x1- n2 c~ d~ 
+INFO: Crossed process found for c~ c~ > x1- n2 c~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > x1+ n2 u~ c~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > x1- n2 d~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ s~ > x1+ n2 c~ c~, reuse diagrams. 
+INFO: Crossed process found for c~ s~ > x1- n2 s~ s~, reuse diagrams. 
+INFO: Process d~ u > x1+ n2 u u~ added to mirror process u d~ > x1+ n2 u u~ 
+INFO: Process d~ u > x1+ n2 c c~ added to mirror process u d~ > x1+ n2 c c~ 
+INFO: Process d~ u > x1+ n2 d d~ added to mirror process u d~ > x1+ n2 d d~ 
+INFO: Process d~ u > x1+ n2 s s~ added to mirror process u d~ > x1+ n2 s s~ 
+INFO: Process d~ c > x1+ n2 c u~ added to mirror process c d~ > x1+ n2 c u~ 
+INFO: Process d~ c > x1+ n2 s d~ added to mirror process c d~ > x1+ n2 s d~ 
+INFO: Process d~ d > x1+ n2 d u~ added to mirror process d d~ > x1+ n2 d u~ 
+INFO: Process d~ d > x1+ n2 s c~ added to mirror process d d~ > x1+ n2 s c~ 
+INFO: Process d~ d > x1- n2 u d~ added to mirror process d d~ > x1- n2 u d~ 
+INFO: Process d~ d > x1- n2 c s~ added to mirror process d d~ > x1- n2 c s~ 
+INFO: Process d~ s > x1+ n2 s u~ added to mirror process s d~ > x1+ n2 s u~ 
+INFO: Process d~ s > x1- n2 c d~ added to mirror process s d~ > x1- n2 c d~ 
+INFO: Process d~ u~ > x1+ n2 u~ u~ added to mirror process u~ d~ > x1+ n2 u~ u~ 
+INFO: Process d~ u~ > x1- n2 d~ d~ added to mirror process u~ d~ > x1- n2 d~ d~ 
+INFO: Process d~ c~ > x1+ n2 u~ c~ added to mirror process c~ d~ > x1+ n2 u~ c~ 
+INFO: Process d~ c~ > x1- n2 d~ s~ added to mirror process c~ d~ > x1- n2 d~ s~ 
+INFO: Crossed process found for d~ d~ > x1+ n2 u~ d~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > x1+ n2 u~ s~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > x1+ n2 c~ d~, reuse diagrams. 
+INFO: Process s~ u > x1+ n2 u c~ added to mirror process u s~ > x1+ n2 u c~ 
+INFO: Process s~ u > x1+ n2 d s~ added to mirror process u s~ > x1+ n2 d s~ 
+INFO: Process s~ c > x1+ n2 u u~ added to mirror process c s~ > x1+ n2 u u~ 
+INFO: Process s~ c > x1+ n2 c c~ added to mirror process c s~ > x1+ n2 c c~ 
+INFO: Process s~ c > x1+ n2 d d~ added to mirror process c s~ > x1+ n2 d d~ 
+INFO: Process s~ c > x1+ n2 s s~ added to mirror process c s~ > x1+ n2 s s~ 
+INFO: Process s~ d > x1+ n2 d c~ added to mirror process d s~ > x1+ n2 d c~ 
+INFO: Process s~ d > x1- n2 u s~ added to mirror process d s~ > x1- n2 u s~ 
+INFO: Process s~ s > x1+ n2 d u~ added to mirror process s s~ > x1+ n2 d u~ 
+INFO: Process s~ s > x1+ n2 s c~ added to mirror process s s~ > x1+ n2 s c~ 
+INFO: Process s~ s > x1- n2 u d~ added to mirror process s s~ > x1- n2 u d~ 
+INFO: Process s~ s > x1- n2 c s~ added to mirror process s s~ > x1- n2 c s~ 
+INFO: Process s~ u~ > x1+ n2 u~ c~ added to mirror process u~ s~ > x1+ n2 u~ c~ 
+INFO: Process s~ u~ > x1- n2 d~ s~ added to mirror process u~ s~ > x1- n2 d~ s~ 
+INFO: Process s~ c~ > x1+ n2 c~ c~ added to mirror process c~ s~ > x1+ n2 c~ c~ 
+INFO: Process s~ c~ > x1- n2 s~ s~ added to mirror process c~ s~ > x1- n2 s~ s~ 
+INFO: Process s~ d~ > x1+ n2 u~ s~ added to mirror process d~ s~ > x1+ n2 u~ s~ 
+INFO: Process s~ d~ > x1+ n2 c~ d~ added to mirror process d~ s~ > x1+ n2 c~ d~ 
+INFO: Crossed process found for s~ s~ > x1+ n2 c~ s~, reuse diagrams. 
+80 processes with 11200 diagrams generated in 4.673 s
+Total: 80 processes with 11200 diagrams
+add process p p > chargino n1 j j QCD=0
+INFO: Trying process: g g > x1+ n1 d u~ QCD=0 @2  
+INFO: Trying process: g g > x1+ n1 d c~ QCD=0 @2  
+INFO: Trying process: g g > x1+ n1 s u~ QCD=0 @2  
+INFO: Trying process: g g > x1+ n1 s c~ QCD=0 @2  
+INFO: Trying process: g g > x1- n1 u d~ QCD=0 @2  
+INFO: Trying process: g g > x1- n1 u s~ QCD=0 @2  
+INFO: Trying process: g g > x1- n1 c d~ QCD=0 @2  
+INFO: Trying process: g g > x1- n1 c s~ QCD=0 @2  
+INFO: Trying process: u u > x1+ n1 u d QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Trying process: u u > x1+ n1 u s QCD=0 @2  
+INFO: Trying process: u u > x1+ n1 c d QCD=0 @2  
+INFO: Trying process: u u > x1+ n1 c s QCD=0 @2  
+INFO: Trying process: u c > x1+ n1 u d QCD=0 @2  
+INFO: Trying process: u c > x1+ n1 u s QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u c > x1+ n1 c d QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u c > x1+ n1 c s QCD=0 @2  
+INFO: Trying process: u d > x1+ n1 d d QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Trying process: u d > x1+ n1 d s QCD=0 @2  
+INFO: Trying process: u d > x1+ n1 s s QCD=0 @2  
+INFO: Trying process: u d > x1- n1 u u QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Trying process: u d > x1- n1 u c QCD=0 @2  
+INFO: Trying process: u d > x1- n1 c c QCD=0 @2  
+INFO: Trying process: u s > x1+ n1 d d QCD=0 @2  
+INFO: Trying process: u s > x1+ n1 d s QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u s > x1+ n1 s s QCD=0 @2  
+INFO: Trying process: u s > x1- n1 u u QCD=0 @2  
+INFO: Trying process: u s > x1- n1 u c QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: u s > x1- n1 c c QCD=0 @2  
+INFO: Crossed process found for u u~ > x1+ n1 d u~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1+ n1 s c~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1- n1 u d~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1- n1 c s~, reuse diagrams. 
+INFO: Crossed process found for u c~ > x1+ n1 d c~, reuse diagrams. 
+INFO: Crossed process found for u c~ > x1- n1 u s~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n1 u u~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n1 c c~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n1 d d~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ n1 s s~, reuse diagrams. 
+INFO: Crossed process found for u s~ > x1+ n1 u c~, reuse diagrams. 
+INFO: Crossed process found for u s~ > x1+ n1 d s~, reuse diagrams. 
+INFO: Process c u > x1+ n1 u s added to mirror process u c > x1+ n1 u s 
+INFO: Process c u > x1+ n1 c d added to mirror process u c > x1+ n1 c d 
+INFO: Trying process: c c > x1+ n1 u d QCD=0 @2  
+INFO: Trying process: c c > x1+ n1 u s QCD=0 @2  
+INFO: Trying process: c c > x1+ n1 c d QCD=0 @2  
+INFO: Trying process: c c > x1+ n1 c s QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Trying process: c d > x1+ n1 d d QCD=0 @2  
+INFO: Trying process: c d > x1+ n1 d s QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: c d > x1+ n1 s s QCD=0 @2  
+INFO: Trying process: c d > x1- n1 u u QCD=0 @2  
+INFO: Trying process: c d > x1- n1 u c QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: c d > x1- n1 c c QCD=0 @2  
+INFO: Trying process: c s > x1+ n1 d d QCD=0 @2  
+INFO: Trying process: c s > x1+ n1 d s QCD=0 @2  
+INFO: Trying process: c s > x1+ n1 s s QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Trying process: c s > x1- n1 u u QCD=0 @2  
+INFO: Trying process: c s > x1- n1 u c QCD=0 @2  
+INFO: Trying process: c s > x1- n1 c c QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Crossed process found for c u~ > x1+ n1 s u~, reuse diagrams. 
+INFO: Crossed process found for c u~ > x1- n1 c d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ n1 d u~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ n1 s c~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1- n1 u d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1- n1 c s~, reuse diagrams. 
+INFO: Crossed process found for c d~ > x1+ n1 c u~, reuse diagrams. 
+INFO: Crossed process found for c d~ > x1+ n1 s d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n1 u u~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n1 c c~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n1 d d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ n1 s s~, reuse diagrams. 
+INFO: Process d u > x1+ n1 d d added to mirror process u d > x1+ n1 d d 
+INFO: Process d u > x1- n1 u u added to mirror process u d > x1- n1 u u 
+INFO: Process d c > x1+ n1 d s added to mirror process c d > x1+ n1 d s 
+INFO: Process d c > x1- n1 u c added to mirror process c d > x1- n1 u c 
+INFO: Trying process: d d > x1- n1 u d QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Trying process: d d > x1- n1 u s QCD=0 @2  
+INFO: Trying process: d d > x1- n1 c d QCD=0 @2  
+INFO: Trying process: d d > x1- n1 c s QCD=0 @2  
+INFO: Trying process: d s > x1- n1 u d QCD=0 @2  
+INFO: Trying process: d s > x1- n1 u s QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: d s > x1- n1 c d QCD=0 @2  
+INFO: Process has 100 diagrams 
+INFO: Trying process: d s > x1- n1 c s QCD=0 @2  
+INFO: Crossed process found for d u~ > x1- n1 u u~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- n1 c c~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- n1 d d~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- n1 s s~, reuse diagrams. 
+INFO: Crossed process found for d c~ > x1- n1 u c~, reuse diagrams. 
+INFO: Crossed process found for d c~ > x1- n1 d s~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ n1 d u~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ n1 s c~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1- n1 u d~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1- n1 c s~, reuse diagrams. 
+INFO: Crossed process found for d s~ > x1+ n1 d c~, reuse diagrams. 
+INFO: Crossed process found for d s~ > x1- n1 u s~, reuse diagrams. 
+INFO: Process s u > x1+ n1 d s added to mirror process u s > x1+ n1 d s 
+INFO: Process s u > x1- n1 u c added to mirror process u s > x1- n1 u c 
+INFO: Process s c > x1+ n1 s s added to mirror process c s > x1+ n1 s s 
+INFO: Process s c > x1- n1 c c added to mirror process c s > x1- n1 c c 
+INFO: Process s d > x1- n1 u s added to mirror process d s > x1- n1 u s 
+INFO: Process s d > x1- n1 c d added to mirror process d s > x1- n1 c d 
+INFO: Trying process: s s > x1- n1 u d QCD=0 @2  
+INFO: Trying process: s s > x1- n1 u s QCD=0 @2  
+INFO: Trying process: s s > x1- n1 c d QCD=0 @2  
+INFO: Trying process: s s > x1- n1 c s QCD=0 @2  
+INFO: Process has 200 diagrams 
+INFO: Crossed process found for s u~ > x1- n1 c u~, reuse diagrams. 
+INFO: Crossed process found for s u~ > x1- n1 s d~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n1 u u~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n1 c c~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n1 d d~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- n1 s s~, reuse diagrams. 
+INFO: Crossed process found for s d~ > x1+ n1 s u~, reuse diagrams. 
+INFO: Crossed process found for s d~ > x1- n1 c d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ n1 d u~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ n1 s c~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1- n1 u d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1- n1 c s~, reuse diagrams. 
+INFO: Process u~ u > x1+ n1 d u~ added to mirror process u u~ > x1+ n1 d u~ 
+INFO: Process u~ u > x1+ n1 s c~ added to mirror process u u~ > x1+ n1 s c~ 
+INFO: Process u~ u > x1- n1 u d~ added to mirror process u u~ > x1- n1 u d~ 
+INFO: Process u~ u > x1- n1 c s~ added to mirror process u u~ > x1- n1 c s~ 
+INFO: Process u~ c > x1+ n1 s u~ added to mirror process c u~ > x1+ n1 s u~ 
+INFO: Process u~ c > x1- n1 c d~ added to mirror process c u~ > x1- n1 c d~ 
+INFO: Process u~ d > x1- n1 u u~ added to mirror process d u~ > x1- n1 u u~ 
+INFO: Process u~ d > x1- n1 c c~ added to mirror process d u~ > x1- n1 c c~ 
+INFO: Process u~ d > x1- n1 d d~ added to mirror process d u~ > x1- n1 d d~ 
+INFO: Process u~ d > x1- n1 s s~ added to mirror process d u~ > x1- n1 s s~ 
+INFO: Process u~ s > x1- n1 c u~ added to mirror process s u~ > x1- n1 c u~ 
+INFO: Process u~ s > x1- n1 s d~ added to mirror process s u~ > x1- n1 s d~ 
+INFO: Crossed process found for u~ u~ > x1- n1 u~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > x1- n1 u~ s~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > x1- n1 c~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > x1+ n1 u~ u~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > x1- n1 d~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > x1+ n1 u~ c~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > x1- n1 d~ s~, reuse diagrams. 
+INFO: Process c~ u > x1+ n1 d c~ added to mirror process u c~ > x1+ n1 d c~ 
+INFO: Process c~ u > x1- n1 u s~ added to mirror process u c~ > x1- n1 u s~ 
+INFO: Process c~ c > x1+ n1 d u~ added to mirror process c c~ > x1+ n1 d u~ 
+INFO: Process c~ c > x1+ n1 s c~ added to mirror process c c~ > x1+ n1 s c~ 
+INFO: Process c~ c > x1- n1 u d~ added to mirror process c c~ > x1- n1 u d~ 
+INFO: Process c~ c > x1- n1 c s~ added to mirror process c c~ > x1- n1 c s~ 
+INFO: Process c~ d > x1- n1 u c~ added to mirror process d c~ > x1- n1 u c~ 
+INFO: Process c~ d > x1- n1 d s~ added to mirror process d c~ > x1- n1 d s~ 
+INFO: Process c~ s > x1- n1 u u~ added to mirror process s c~ > x1- n1 u u~ 
+INFO: Process c~ s > x1- n1 c c~ added to mirror process s c~ > x1- n1 c c~ 
+INFO: Process c~ s > x1- n1 d d~ added to mirror process s c~ > x1- n1 d d~ 
+INFO: Process c~ s > x1- n1 s s~ added to mirror process s c~ > x1- n1 s s~ 
+INFO: Process c~ u~ > x1- n1 u~ s~ added to mirror process u~ c~ > x1- n1 u~ s~ 
+INFO: Process c~ u~ > x1- n1 c~ d~ added to mirror process u~ c~ > x1- n1 c~ d~ 
+INFO: Crossed process found for c~ c~ > x1- n1 c~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > x1+ n1 u~ c~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > x1- n1 d~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ s~ > x1+ n1 c~ c~, reuse diagrams. 
+INFO: Crossed process found for c~ s~ > x1- n1 s~ s~, reuse diagrams. 
+INFO: Process d~ u > x1+ n1 u u~ added to mirror process u d~ > x1+ n1 u u~ 
+INFO: Process d~ u > x1+ n1 c c~ added to mirror process u d~ > x1+ n1 c c~ 
+INFO: Process d~ u > x1+ n1 d d~ added to mirror process u d~ > x1+ n1 d d~ 
+INFO: Process d~ u > x1+ n1 s s~ added to mirror process u d~ > x1+ n1 s s~ 
+INFO: Process d~ c > x1+ n1 c u~ added to mirror process c d~ > x1+ n1 c u~ 
+INFO: Process d~ c > x1+ n1 s d~ added to mirror process c d~ > x1+ n1 s d~ 
+INFO: Process d~ d > x1+ n1 d u~ added to mirror process d d~ > x1+ n1 d u~ 
+INFO: Process d~ d > x1+ n1 s c~ added to mirror process d d~ > x1+ n1 s c~ 
+INFO: Process d~ d > x1- n1 u d~ added to mirror process d d~ > x1- n1 u d~ 
+INFO: Process d~ d > x1- n1 c s~ added to mirror process d d~ > x1- n1 c s~ 
+INFO: Process d~ s > x1+ n1 s u~ added to mirror process s d~ > x1+ n1 s u~ 
+INFO: Process d~ s > x1- n1 c d~ added to mirror process s d~ > x1- n1 c d~ 
+INFO: Process d~ u~ > x1+ n1 u~ u~ added to mirror process u~ d~ > x1+ n1 u~ u~ 
+INFO: Process d~ u~ > x1- n1 d~ d~ added to mirror process u~ d~ > x1- n1 d~ d~ 
+INFO: Process d~ c~ > x1+ n1 u~ c~ added to mirror process c~ d~ > x1+ n1 u~ c~ 
+INFO: Process d~ c~ > x1- n1 d~ s~ added to mirror process c~ d~ > x1- n1 d~ s~ 
+INFO: Crossed process found for d~ d~ > x1+ n1 u~ d~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > x1+ n1 u~ s~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > x1+ n1 c~ d~, reuse diagrams. 
+INFO: Process s~ u > x1+ n1 u c~ added to mirror process u s~ > x1+ n1 u c~ 
+INFO: Process s~ u > x1+ n1 d s~ added to mirror process u s~ > x1+ n1 d s~ 
+INFO: Process s~ c > x1+ n1 u u~ added to mirror process c s~ > x1+ n1 u u~ 
+INFO: Process s~ c > x1+ n1 c c~ added to mirror process c s~ > x1+ n1 c c~ 
+INFO: Process s~ c > x1+ n1 d d~ added to mirror process c s~ > x1+ n1 d d~ 
+INFO: Process s~ c > x1+ n1 s s~ added to mirror process c s~ > x1+ n1 s s~ 
+INFO: Process s~ d > x1+ n1 d c~ added to mirror process d s~ > x1+ n1 d c~ 
+INFO: Process s~ d > x1- n1 u s~ added to mirror process d s~ > x1- n1 u s~ 
+INFO: Process s~ s > x1+ n1 d u~ added to mirror process s s~ > x1+ n1 d u~ 
+INFO: Process s~ s > x1+ n1 s c~ added to mirror process s s~ > x1+ n1 s c~ 
+INFO: Process s~ s > x1- n1 u d~ added to mirror process s s~ > x1- n1 u d~ 
+INFO: Process s~ s > x1- n1 c s~ added to mirror process s s~ > x1- n1 c s~ 
+INFO: Process s~ u~ > x1+ n1 u~ c~ added to mirror process u~ s~ > x1+ n1 u~ c~ 
+INFO: Process s~ u~ > x1- n1 d~ s~ added to mirror process u~ s~ > x1- n1 d~ s~ 
+INFO: Process s~ c~ > x1+ n1 c~ c~ added to mirror process c~ s~ > x1+ n1 c~ c~ 
+INFO: Process s~ c~ > x1- n1 s~ s~ added to mirror process c~ s~ > x1- n1 s~ s~ 
+INFO: Process s~ d~ > x1+ n1 u~ s~ added to mirror process d~ s~ > x1+ n1 u~ s~ 
+INFO: Process s~ d~ > x1+ n1 c~ d~ added to mirror process d~ s~ > x1+ n1 c~ d~ 
+INFO: Crossed process found for s~ s~ > x1+ n1 c~ s~, reuse diagrams. 
+80 processes with 11200 diagrams generated in 4.755 s
+Total: 160 processes with 22400 diagrams
+add process p p > n2 n1 j j QCD=0
+INFO: Trying process: g g > n2 n1 g g QCD=0 @3  
+INFO: Trying process: g g > n2 n1 u u~ QCD=0 @3  
+INFO: Trying process: g g > n2 n1 u c~ QCD=0 @3  
+INFO: Trying process: g g > n2 n1 c u~ QCD=0 @3  
+INFO: Trying process: g g > n2 n1 c c~ QCD=0 @3  
+INFO: Trying process: g g > n2 n1 d d~ QCD=0 @3  
+INFO: Trying process: g g > n2 n1 d s~ QCD=0 @3  
+INFO: Trying process: g g > n2 n1 s d~ QCD=0 @3  
+INFO: Trying process: g g > n2 n1 s s~ QCD=0 @3  
+INFO: Trying process: u u > n2 n1 u u QCD=0 @3  
+INFO: Process has 516 diagrams 
+INFO: Trying process: u u > n2 n1 u c QCD=0 @3  
+INFO: Trying process: u u > n2 n1 c c QCD=0 @3  
+INFO: Trying process: u c > n2 n1 u u QCD=0 @3  
+INFO: Trying process: u c > n2 n1 u c QCD=0 @3  
+INFO: Process has 258 diagrams 
+INFO: Trying process: u c > n2 n1 c c QCD=0 @3  
+INFO: Trying process: u d > n2 n1 u d QCD=0 @3  
+INFO: Process has 321 diagrams 
+INFO: Trying process: u d > n2 n1 u s QCD=0 @3  
+INFO: Trying process: u d > n2 n1 c d QCD=0 @3  
+INFO: Trying process: u d > n2 n1 c s QCD=0 @3  
+INFO: Trying process: u s > n2 n1 u d QCD=0 @3  
+INFO: Trying process: u s > n2 n1 u s QCD=0 @3  
+INFO: Process has 258 diagrams 
+INFO: Trying process: u s > n2 n1 c d QCD=0 @3  
+INFO: Process has 63 diagrams 
+INFO: Trying process: u s > n2 n1 c s QCD=0 @3  
+INFO: Crossed process found for u u~ > n2 n1 u u~, reuse diagrams. 
+INFO: Crossed process found for u u~ > n2 n1 c c~, reuse diagrams. 
+INFO: Crossed process found for u u~ > n2 n1 d d~, reuse diagrams. 
+INFO: Crossed process found for u u~ > n2 n1 s s~, reuse diagrams. 
+INFO: Crossed process found for u c~ > n2 n1 u c~, reuse diagrams. 
+INFO: Crossed process found for u c~ > n2 n1 d s~, reuse diagrams. 
+INFO: Crossed process found for u d~ > n2 n1 u d~, reuse diagrams. 
+INFO: Crossed process found for u d~ > n2 n1 c s~, reuse diagrams. 
+INFO: Crossed process found for u s~ > n2 n1 u s~, reuse diagrams. 
+INFO: Process c u > n2 n1 u c added to mirror process u c > n2 n1 u c 
+INFO: Trying process: c c > n2 n1 u u QCD=0 @3  
+INFO: Trying process: c c > n2 n1 u c QCD=0 @3  
+INFO: Trying process: c c > n2 n1 c c QCD=0 @3  
+INFO: Process has 516 diagrams 
+INFO: Trying process: c d > n2 n1 u d QCD=0 @3  
+INFO: Trying process: c d > n2 n1 u s QCD=0 @3  
+INFO: Process has 63 diagrams 
+INFO: Trying process: c d > n2 n1 c d QCD=0 @3  
+INFO: Process has 258 diagrams 
+INFO: Trying process: c d > n2 n1 c s QCD=0 @3  
+INFO: Trying process: c s > n2 n1 u d QCD=0 @3  
+INFO: Trying process: c s > n2 n1 u s QCD=0 @3  
+INFO: Trying process: c s > n2 n1 c d QCD=0 @3  
+INFO: Trying process: c s > n2 n1 c s QCD=0 @3  
+INFO: Process has 321 diagrams 
+INFO: Crossed process found for c u~ > n2 n1 c u~, reuse diagrams. 
+INFO: Crossed process found for c u~ > n2 n1 s d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n1 u u~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n1 c c~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n1 d d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n1 s s~, reuse diagrams. 
+INFO: Crossed process found for c d~ > n2 n1 c d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > n2 n1 u d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > n2 n1 c s~, reuse diagrams. 
+INFO: Process d u > n2 n1 u d added to mirror process u d > n2 n1 u d 
+INFO: Process d c > n2 n1 u s added to mirror process c d > n2 n1 u s 
+INFO: Process d c > n2 n1 c d added to mirror process c d > n2 n1 c d 
+INFO: Trying process: d d > n2 n1 d d QCD=0 @3  
+INFO: Process has 516 diagrams 
+INFO: Trying process: d d > n2 n1 d s QCD=0 @3  
+INFO: Trying process: d d > n2 n1 s s QCD=0 @3  
+INFO: Trying process: d s > n2 n1 d d QCD=0 @3  
+INFO: Trying process: d s > n2 n1 d s QCD=0 @3  
+INFO: Process has 258 diagrams 
+INFO: Trying process: d s > n2 n1 s s QCD=0 @3  
+INFO: Crossed process found for d u~ > n2 n1 d u~, reuse diagrams. 
+INFO: Crossed process found for d u~ > n2 n1 s c~, reuse diagrams. 
+INFO: Crossed process found for d c~ > n2 n1 d c~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n1 u u~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n1 c c~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n1 d d~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n1 s s~, reuse diagrams. 
+INFO: Crossed process found for d s~ > n2 n1 u c~, reuse diagrams. 
+INFO: Crossed process found for d s~ > n2 n1 d s~, reuse diagrams. 
+INFO: Process s u > n2 n1 u s added to mirror process u s > n2 n1 u s 
+INFO: Process s u > n2 n1 c d added to mirror process u s > n2 n1 c d 
+INFO: Process s c > n2 n1 c s added to mirror process c s > n2 n1 c s 
+INFO: Process s d > n2 n1 d s added to mirror process d s > n2 n1 d s 
+INFO: Trying process: s s > n2 n1 d d QCD=0 @3  
+INFO: Trying process: s s > n2 n1 d s QCD=0 @3  
+INFO: Trying process: s s > n2 n1 s s QCD=0 @3  
+INFO: Process has 516 diagrams 
+INFO: Crossed process found for s u~ > n2 n1 s u~, reuse diagrams. 
+INFO: Crossed process found for s c~ > n2 n1 d u~, reuse diagrams. 
+INFO: Crossed process found for s c~ > n2 n1 s c~, reuse diagrams. 
+INFO: Crossed process found for s d~ > n2 n1 c u~, reuse diagrams. 
+INFO: Crossed process found for s d~ > n2 n1 s d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n1 u u~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n1 c c~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n1 d d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n1 s s~, reuse diagrams. 
+INFO: Process u~ u > n2 n1 u u~ added to mirror process u u~ > n2 n1 u u~ 
+INFO: Process u~ u > n2 n1 c c~ added to mirror process u u~ > n2 n1 c c~ 
+INFO: Process u~ u > n2 n1 d d~ added to mirror process u u~ > n2 n1 d d~ 
+INFO: Process u~ u > n2 n1 s s~ added to mirror process u u~ > n2 n1 s s~ 
+INFO: Process u~ c > n2 n1 c u~ added to mirror process c u~ > n2 n1 c u~ 
+INFO: Process u~ c > n2 n1 s d~ added to mirror process c u~ > n2 n1 s d~ 
+INFO: Process u~ d > n2 n1 d u~ added to mirror process d u~ > n2 n1 d u~ 
+INFO: Process u~ d > n2 n1 s c~ added to mirror process d u~ > n2 n1 s c~ 
+INFO: Process u~ s > n2 n1 s u~ added to mirror process s u~ > n2 n1 s u~ 
+INFO: Crossed process found for u~ u~ > n2 n1 u~ u~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > n2 n1 u~ c~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > n2 n1 u~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > n2 n1 u~ s~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > n2 n1 c~ d~, reuse diagrams. 
+INFO: Process c~ u > n2 n1 u c~ added to mirror process u c~ > n2 n1 u c~ 
+INFO: Process c~ u > n2 n1 d s~ added to mirror process u c~ > n2 n1 d s~ 
+INFO: Process c~ c > n2 n1 u u~ added to mirror process c c~ > n2 n1 u u~ 
+INFO: Process c~ c > n2 n1 c c~ added to mirror process c c~ > n2 n1 c c~ 
+INFO: Process c~ c > n2 n1 d d~ added to mirror process c c~ > n2 n1 d d~ 
+INFO: Process c~ c > n2 n1 s s~ added to mirror process c c~ > n2 n1 s s~ 
+INFO: Process c~ d > n2 n1 d c~ added to mirror process d c~ > n2 n1 d c~ 
+INFO: Process c~ s > n2 n1 d u~ added to mirror process s c~ > n2 n1 d u~ 
+INFO: Process c~ s > n2 n1 s c~ added to mirror process s c~ > n2 n1 s c~ 
+INFO: Process c~ u~ > n2 n1 u~ c~ added to mirror process u~ c~ > n2 n1 u~ c~ 
+INFO: Crossed process found for c~ c~ > n2 n1 c~ c~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > n2 n1 u~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > n2 n1 c~ d~, reuse diagrams. 
+INFO: Crossed process found for c~ s~ > n2 n1 c~ s~, reuse diagrams. 
+INFO: Process d~ u > n2 n1 u d~ added to mirror process u d~ > n2 n1 u d~ 
+INFO: Process d~ u > n2 n1 c s~ added to mirror process u d~ > n2 n1 c s~ 
+INFO: Process d~ c > n2 n1 c d~ added to mirror process c d~ > n2 n1 c d~ 
+INFO: Process d~ d > n2 n1 u u~ added to mirror process d d~ > n2 n1 u u~ 
+INFO: Process d~ d > n2 n1 c c~ added to mirror process d d~ > n2 n1 c c~ 
+INFO: Process d~ d > n2 n1 d d~ added to mirror process d d~ > n2 n1 d d~ 
+INFO: Process d~ d > n2 n1 s s~ added to mirror process d d~ > n2 n1 s s~ 
+INFO: Process d~ s > n2 n1 c u~ added to mirror process s d~ > n2 n1 c u~ 
+INFO: Process d~ s > n2 n1 s d~ added to mirror process s d~ > n2 n1 s d~ 
+INFO: Process d~ u~ > n2 n1 u~ d~ added to mirror process u~ d~ > n2 n1 u~ d~ 
+INFO: Process d~ c~ > n2 n1 u~ s~ added to mirror process c~ d~ > n2 n1 u~ s~ 
+INFO: Process d~ c~ > n2 n1 c~ d~ added to mirror process c~ d~ > n2 n1 c~ d~ 
+INFO: Crossed process found for d~ d~ > n2 n1 d~ d~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > n2 n1 d~ s~, reuse diagrams. 
+INFO: Process s~ u > n2 n1 u s~ added to mirror process u s~ > n2 n1 u s~ 
+INFO: Process s~ c > n2 n1 u d~ added to mirror process c s~ > n2 n1 u d~ 
+INFO: Process s~ c > n2 n1 c s~ added to mirror process c s~ > n2 n1 c s~ 
+INFO: Process s~ d > n2 n1 u c~ added to mirror process d s~ > n2 n1 u c~ 
+INFO: Process s~ d > n2 n1 d s~ added to mirror process d s~ > n2 n1 d s~ 
+INFO: Process s~ s > n2 n1 u u~ added to mirror process s s~ > n2 n1 u u~ 
+INFO: Process s~ s > n2 n1 c c~ added to mirror process s s~ > n2 n1 c c~ 
+INFO: Process s~ s > n2 n1 d d~ added to mirror process s s~ > n2 n1 d d~ 
+INFO: Process s~ s > n2 n1 s s~ added to mirror process s s~ > n2 n1 s s~ 
+INFO: Process s~ u~ > n2 n1 u~ s~ added to mirror process u~ s~ > n2 n1 u~ s~ 
+INFO: Process s~ u~ > n2 n1 c~ d~ added to mirror process u~ s~ > n2 n1 c~ d~ 
+INFO: Process s~ c~ > n2 n1 c~ s~ added to mirror process c~ s~ > n2 n1 c~ s~ 
+INFO: Process s~ d~ > n2 n1 d~ s~ added to mirror process d~ s~ > n2 n1 d~ s~ 
+INFO: Crossed process found for s~ s~ > n2 n1 s~ s~, reuse diagrams. 
+60 processes with 16992 diagrams generated in 6.874 s
+Total: 220 processes with 39392 diagrams
+add process p p > n2 n2 j j QCD=0
+INFO: Trying process: g g > n2 n2 g g QCD=0 @4  
+INFO: Trying process: g g > n2 n2 u u~ QCD=0 @4  
+INFO: Trying process: g g > n2 n2 u c~ QCD=0 @4  
+INFO: Trying process: g g > n2 n2 c u~ QCD=0 @4  
+INFO: Trying process: g g > n2 n2 c c~ QCD=0 @4  
+INFO: Trying process: g g > n2 n2 d d~ QCD=0 @4  
+INFO: Trying process: g g > n2 n2 d s~ QCD=0 @4  
+INFO: Trying process: g g > n2 n2 s d~ QCD=0 @4  
+INFO: Trying process: g g > n2 n2 s s~ QCD=0 @4  
+INFO: Trying process: u u > n2 n2 u u QCD=0 @4  
+INFO: Process has 516 diagrams 
+INFO: Trying process: u u > n2 n2 u c QCD=0 @4  
+INFO: Trying process: u u > n2 n2 c c QCD=0 @4  
+INFO: Trying process: u c > n2 n2 u u QCD=0 @4  
+INFO: Trying process: u c > n2 n2 u c QCD=0 @4  
+INFO: Process has 258 diagrams 
+INFO: Trying process: u c > n2 n2 c c QCD=0 @4  
+INFO: Trying process: u d > n2 n2 u d QCD=0 @4  
+INFO: Process has 321 diagrams 
+INFO: Trying process: u d > n2 n2 u s QCD=0 @4  
+INFO: Trying process: u d > n2 n2 c d QCD=0 @4  
+INFO: Trying process: u d > n2 n2 c s QCD=0 @4  
+INFO: Trying process: u s > n2 n2 u d QCD=0 @4  
+INFO: Trying process: u s > n2 n2 u s QCD=0 @4  
+INFO: Process has 258 diagrams 
+INFO: Trying process: u s > n2 n2 c d QCD=0 @4  
+INFO: Process has 63 diagrams 
+INFO: Trying process: u s > n2 n2 c s QCD=0 @4  
+INFO: Crossed process found for u u~ > n2 n2 u u~, reuse diagrams. 
+INFO: Crossed process found for u u~ > n2 n2 c c~, reuse diagrams. 
+INFO: Crossed process found for u u~ > n2 n2 d d~, reuse diagrams. 
+INFO: Crossed process found for u u~ > n2 n2 s s~, reuse diagrams. 
+INFO: Crossed process found for u c~ > n2 n2 u c~, reuse diagrams. 
+INFO: Crossed process found for u c~ > n2 n2 d s~, reuse diagrams. 
+INFO: Crossed process found for u d~ > n2 n2 u d~, reuse diagrams. 
+INFO: Crossed process found for u d~ > n2 n2 c s~, reuse diagrams. 
+INFO: Crossed process found for u s~ > n2 n2 u s~, reuse diagrams. 
+INFO: Process c u > n2 n2 u c added to mirror process u c > n2 n2 u c 
+INFO: Trying process: c c > n2 n2 u u QCD=0 @4  
+INFO: Trying process: c c > n2 n2 u c QCD=0 @4  
+INFO: Trying process: c c > n2 n2 c c QCD=0 @4  
+INFO: Process has 516 diagrams 
+INFO: Trying process: c d > n2 n2 u d QCD=0 @4  
+INFO: Trying process: c d > n2 n2 u s QCD=0 @4  
+INFO: Process has 63 diagrams 
+INFO: Trying process: c d > n2 n2 c d QCD=0 @4  
+INFO: Process has 258 diagrams 
+INFO: Trying process: c d > n2 n2 c s QCD=0 @4  
+INFO: Trying process: c s > n2 n2 u d QCD=0 @4  
+INFO: Trying process: c s > n2 n2 u s QCD=0 @4  
+INFO: Trying process: c s > n2 n2 c d QCD=0 @4  
+INFO: Trying process: c s > n2 n2 c s QCD=0 @4  
+INFO: Process has 321 diagrams 
+INFO: Crossed process found for c u~ > n2 n2 c u~, reuse diagrams. 
+INFO: Crossed process found for c u~ > n2 n2 s d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n2 u u~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n2 c c~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n2 d d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > n2 n2 s s~, reuse diagrams. 
+INFO: Crossed process found for c d~ > n2 n2 c d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > n2 n2 u d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > n2 n2 c s~, reuse diagrams. 
+INFO: Process d u > n2 n2 u d added to mirror process u d > n2 n2 u d 
+INFO: Process d c > n2 n2 u s added to mirror process c d > n2 n2 u s 
+INFO: Process d c > n2 n2 c d added to mirror process c d > n2 n2 c d 
+INFO: Trying process: d d > n2 n2 d d QCD=0 @4  
+INFO: Process has 516 diagrams 
+INFO: Trying process: d d > n2 n2 d s QCD=0 @4  
+INFO: Trying process: d d > n2 n2 s s QCD=0 @4  
+INFO: Trying process: d s > n2 n2 d d QCD=0 @4  
+INFO: Trying process: d s > n2 n2 d s QCD=0 @4  
+INFO: Process has 258 diagrams 
+INFO: Trying process: d s > n2 n2 s s QCD=0 @4  
+INFO: Crossed process found for d u~ > n2 n2 d u~, reuse diagrams. 
+INFO: Crossed process found for d u~ > n2 n2 s c~, reuse diagrams. 
+INFO: Crossed process found for d c~ > n2 n2 d c~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n2 u u~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n2 c c~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n2 d d~, reuse diagrams. 
+INFO: Crossed process found for d d~ > n2 n2 s s~, reuse diagrams. 
+INFO: Crossed process found for d s~ > n2 n2 u c~, reuse diagrams. 
+INFO: Crossed process found for d s~ > n2 n2 d s~, reuse diagrams. 
+INFO: Process s u > n2 n2 u s added to mirror process u s > n2 n2 u s 
+INFO: Process s u > n2 n2 c d added to mirror process u s > n2 n2 c d 
+INFO: Process s c > n2 n2 c s added to mirror process c s > n2 n2 c s 
+INFO: Process s d > n2 n2 d s added to mirror process d s > n2 n2 d s 
+INFO: Trying process: s s > n2 n2 d d QCD=0 @4  
+INFO: Trying process: s s > n2 n2 d s QCD=0 @4  
+INFO: Trying process: s s > n2 n2 s s QCD=0 @4  
+INFO: Process has 516 diagrams 
+INFO: Crossed process found for s u~ > n2 n2 s u~, reuse diagrams. 
+INFO: Crossed process found for s c~ > n2 n2 d u~, reuse diagrams. 
+INFO: Crossed process found for s c~ > n2 n2 s c~, reuse diagrams. 
+INFO: Crossed process found for s d~ > n2 n2 c u~, reuse diagrams. 
+INFO: Crossed process found for s d~ > n2 n2 s d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n2 u u~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n2 c c~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n2 d d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > n2 n2 s s~, reuse diagrams. 
+INFO: Process u~ u > n2 n2 u u~ added to mirror process u u~ > n2 n2 u u~ 
+INFO: Process u~ u > n2 n2 c c~ added to mirror process u u~ > n2 n2 c c~ 
+INFO: Process u~ u > n2 n2 d d~ added to mirror process u u~ > n2 n2 d d~ 
+INFO: Process u~ u > n2 n2 s s~ added to mirror process u u~ > n2 n2 s s~ 
+INFO: Process u~ c > n2 n2 c u~ added to mirror process c u~ > n2 n2 c u~ 
+INFO: Process u~ c > n2 n2 s d~ added to mirror process c u~ > n2 n2 s d~ 
+INFO: Process u~ d > n2 n2 d u~ added to mirror process d u~ > n2 n2 d u~ 
+INFO: Process u~ d > n2 n2 s c~ added to mirror process d u~ > n2 n2 s c~ 
+INFO: Process u~ s > n2 n2 s u~ added to mirror process s u~ > n2 n2 s u~ 
+INFO: Crossed process found for u~ u~ > n2 n2 u~ u~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > n2 n2 u~ c~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > n2 n2 u~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > n2 n2 u~ s~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > n2 n2 c~ d~, reuse diagrams. 
+INFO: Process c~ u > n2 n2 u c~ added to mirror process u c~ > n2 n2 u c~ 
+INFO: Process c~ u > n2 n2 d s~ added to mirror process u c~ > n2 n2 d s~ 
+INFO: Process c~ c > n2 n2 u u~ added to mirror process c c~ > n2 n2 u u~ 
+INFO: Process c~ c > n2 n2 c c~ added to mirror process c c~ > n2 n2 c c~ 
+INFO: Process c~ c > n2 n2 d d~ added to mirror process c c~ > n2 n2 d d~ 
+INFO: Process c~ c > n2 n2 s s~ added to mirror process c c~ > n2 n2 s s~ 
+INFO: Process c~ d > n2 n2 d c~ added to mirror process d c~ > n2 n2 d c~ 
+INFO: Process c~ s > n2 n2 d u~ added to mirror process s c~ > n2 n2 d u~ 
+INFO: Process c~ s > n2 n2 s c~ added to mirror process s c~ > n2 n2 s c~ 
+INFO: Process c~ u~ > n2 n2 u~ c~ added to mirror process u~ c~ > n2 n2 u~ c~ 
+INFO: Crossed process found for c~ c~ > n2 n2 c~ c~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > n2 n2 u~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > n2 n2 c~ d~, reuse diagrams. 
+INFO: Crossed process found for c~ s~ > n2 n2 c~ s~, reuse diagrams. 
+INFO: Process d~ u > n2 n2 u d~ added to mirror process u d~ > n2 n2 u d~ 
+INFO: Process d~ u > n2 n2 c s~ added to mirror process u d~ > n2 n2 c s~ 
+INFO: Process d~ c > n2 n2 c d~ added to mirror process c d~ > n2 n2 c d~ 
+INFO: Process d~ d > n2 n2 u u~ added to mirror process d d~ > n2 n2 u u~ 
+INFO: Process d~ d > n2 n2 c c~ added to mirror process d d~ > n2 n2 c c~ 
+INFO: Process d~ d > n2 n2 d d~ added to mirror process d d~ > n2 n2 d d~ 
+INFO: Process d~ d > n2 n2 s s~ added to mirror process d d~ > n2 n2 s s~ 
+INFO: Process d~ s > n2 n2 c u~ added to mirror process s d~ > n2 n2 c u~ 
+INFO: Process d~ s > n2 n2 s d~ added to mirror process s d~ > n2 n2 s d~ 
+INFO: Process d~ u~ > n2 n2 u~ d~ added to mirror process u~ d~ > n2 n2 u~ d~ 
+INFO: Process d~ c~ > n2 n2 u~ s~ added to mirror process c~ d~ > n2 n2 u~ s~ 
+INFO: Process d~ c~ > n2 n2 c~ d~ added to mirror process c~ d~ > n2 n2 c~ d~ 
+INFO: Crossed process found for d~ d~ > n2 n2 d~ d~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > n2 n2 d~ s~, reuse diagrams. 
+INFO: Process s~ u > n2 n2 u s~ added to mirror process u s~ > n2 n2 u s~ 
+INFO: Process s~ c > n2 n2 u d~ added to mirror process c s~ > n2 n2 u d~ 
+INFO: Process s~ c > n2 n2 c s~ added to mirror process c s~ > n2 n2 c s~ 
+INFO: Process s~ d > n2 n2 u c~ added to mirror process d s~ > n2 n2 u c~ 
+INFO: Process s~ d > n2 n2 d s~ added to mirror process d s~ > n2 n2 d s~ 
+INFO: Process s~ s > n2 n2 u u~ added to mirror process s s~ > n2 n2 u u~ 
+INFO: Process s~ s > n2 n2 c c~ added to mirror process s s~ > n2 n2 c c~ 
+INFO: Process s~ s > n2 n2 d d~ added to mirror process s s~ > n2 n2 d d~ 
+INFO: Process s~ s > n2 n2 s s~ added to mirror process s s~ > n2 n2 s s~ 
+INFO: Process s~ u~ > n2 n2 u~ s~ added to mirror process u~ s~ > n2 n2 u~ s~ 
+INFO: Process s~ u~ > n2 n2 c~ d~ added to mirror process u~ s~ > n2 n2 c~ d~ 
+INFO: Process s~ c~ > n2 n2 c~ s~ added to mirror process c~ s~ > n2 n2 c~ s~ 
+INFO: Process s~ d~ > n2 n2 d~ s~ added to mirror process d~ s~ > n2 n2 d~ s~ 
+INFO: Crossed process found for s~ s~ > n2 n2 s~ s~, reuse diagrams. 
+60 processes with 16992 diagrams generated in 7.030 s
+Total: 280 processes with 56384 diagrams
+add process p p > chargino chargino j j QCD=0
+INFO: Trying process: g g > x1+ x1- g g QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- u u~ QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- u c~ QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- c u~ QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- c c~ QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- d d~ QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- d s~ QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- s d~ QCD=0 @5  
+INFO: Trying process: g g > x1+ x1- s s~ QCD=0 @5  
+INFO: Trying process: u u > x1+ x1+ d d QCD=0 @5  
+INFO: Process has 152 diagrams 
+INFO: Trying process: u u > x1+ x1+ d s QCD=0 @5  
+INFO: Trying process: u u > x1+ x1+ s s QCD=0 @5  
+INFO: Trying process: u u > x1+ x1- u u QCD=0 @5  
+INFO: Process has 132 diagrams 
+INFO: Trying process: u u > x1+ x1- u c QCD=0 @5  
+INFO: Trying process: u u > x1+ x1- c c QCD=0 @5  
+INFO: Trying process: u c > x1+ x1+ d d QCD=0 @5  
+INFO: Trying process: u c > x1+ x1+ d s QCD=0 @5  
+INFO: Process has 76 diagrams 
+INFO: Trying process: u c > x1+ x1+ s s QCD=0 @5  
+INFO: Trying process: u c > x1+ x1- u u QCD=0 @5  
+INFO: Trying process: u c > x1+ x1- u c QCD=0 @5  
+INFO: Process has 66 diagrams 
+INFO: Trying process: u c > x1+ x1- c c QCD=0 @5  
+INFO: Trying process: u d > x1+ x1- u d QCD=0 @5  
+INFO: Process has 118 diagrams 
+INFO: Trying process: u d > x1+ x1- u s QCD=0 @5  
+INFO: Trying process: u d > x1+ x1- c d QCD=0 @5  
+INFO: Trying process: u d > x1+ x1- c s QCD=0 @5  
+INFO: Trying process: u s > x1+ x1- u d QCD=0 @5  
+INFO: Trying process: u s > x1+ x1- u s QCD=0 @5  
+INFO: Process has 66 diagrams 
+INFO: Trying process: u s > x1+ x1- c d QCD=0 @5  
+INFO: Process has 52 diagrams 
+INFO: Trying process: u s > x1+ x1- c s QCD=0 @5  
+INFO: Crossed process found for u u~ > x1+ x1- u u~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1+ x1- c c~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1+ x1- d d~, reuse diagrams. 
+INFO: Crossed process found for u u~ > x1+ x1- s s~, reuse diagrams. 
+INFO: Crossed process found for u c~ > x1+ x1- u c~, reuse diagrams. 
+INFO: Crossed process found for u c~ > x1+ x1- d s~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ x1+ d u~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ x1+ s c~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ x1- u d~, reuse diagrams. 
+INFO: Crossed process found for u d~ > x1+ x1- c s~, reuse diagrams. 
+INFO: Crossed process found for u s~ > x1+ x1+ d c~, reuse diagrams. 
+INFO: Crossed process found for u s~ > x1+ x1- u s~, reuse diagrams. 
+INFO: Process c u > x1+ x1+ d s added to mirror process u c > x1+ x1+ d s 
+INFO: Process c u > x1+ x1- u c added to mirror process u c > x1+ x1- u c 
+INFO: Trying process: c c > x1+ x1+ d d QCD=0 @5  
+INFO: Trying process: c c > x1+ x1+ d s QCD=0 @5  
+INFO: Trying process: c c > x1+ x1+ s s QCD=0 @5  
+INFO: Process has 152 diagrams 
+INFO: Trying process: c c > x1+ x1- u u QCD=0 @5  
+INFO: Trying process: c c > x1+ x1- u c QCD=0 @5  
+INFO: Trying process: c c > x1+ x1- c c QCD=0 @5  
+INFO: Process has 132 diagrams 
+INFO: Trying process: c d > x1+ x1- u d QCD=0 @5  
+INFO: Trying process: c d > x1+ x1- u s QCD=0 @5  
+INFO: Process has 52 diagrams 
+INFO: Trying process: c d > x1+ x1- c d QCD=0 @5  
+INFO: Process has 66 diagrams 
+INFO: Trying process: c d > x1+ x1- c s QCD=0 @5  
+INFO: Trying process: c s > x1+ x1- u d QCD=0 @5  
+INFO: Trying process: c s > x1+ x1- u s QCD=0 @5  
+INFO: Trying process: c s > x1+ x1- c d QCD=0 @5  
+INFO: Trying process: c s > x1+ x1- c s QCD=0 @5  
+INFO: Process has 118 diagrams 
+INFO: Crossed process found for c u~ > x1+ x1- c u~, reuse diagrams. 
+INFO: Crossed process found for c u~ > x1+ x1- s d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ x1- u u~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ x1- c c~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ x1- d d~, reuse diagrams. 
+INFO: Crossed process found for c c~ > x1+ x1- s s~, reuse diagrams. 
+INFO: Crossed process found for c d~ > x1+ x1+ s u~, reuse diagrams. 
+INFO: Crossed process found for c d~ > x1+ x1- c d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ x1+ d u~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ x1+ s c~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ x1- u d~, reuse diagrams. 
+INFO: Crossed process found for c s~ > x1+ x1- c s~, reuse diagrams. 
+INFO: Process d u > x1+ x1- u d added to mirror process u d > x1+ x1- u d 
+INFO: Process d c > x1+ x1- u s added to mirror process c d > x1+ x1- u s 
+INFO: Process d c > x1+ x1- c d added to mirror process c d > x1+ x1- c d 
+INFO: Trying process: d d > x1+ x1- d d QCD=0 @5  
+INFO: Process has 132 diagrams 
+INFO: Trying process: d d > x1+ x1- d s QCD=0 @5  
+INFO: Trying process: d d > x1+ x1- s s QCD=0 @5  
+INFO: Trying process: d d > x1- x1- u u QCD=0 @5  
+INFO: Process has 152 diagrams 
+INFO: Trying process: d d > x1- x1- u c QCD=0 @5  
+INFO: Trying process: d d > x1- x1- c c QCD=0 @5  
+INFO: Trying process: d s > x1+ x1- d d QCD=0 @5  
+INFO: Trying process: d s > x1+ x1- d s QCD=0 @5  
+INFO: Process has 66 diagrams 
+INFO: Trying process: d s > x1+ x1- s s QCD=0 @5  
+INFO: Trying process: d s > x1- x1- u u QCD=0 @5  
+INFO: Trying process: d s > x1- x1- u c QCD=0 @5  
+INFO: Process has 76 diagrams 
+INFO: Trying process: d s > x1- x1- c c QCD=0 @5  
+INFO: Crossed process found for d u~ > x1+ x1- d u~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1+ x1- s c~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- x1- u d~, reuse diagrams. 
+INFO: Crossed process found for d u~ > x1- x1- c s~, reuse diagrams. 
+INFO: Crossed process found for d c~ > x1+ x1- d c~, reuse diagrams. 
+INFO: Crossed process found for d c~ > x1- x1- u s~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ x1- u u~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ x1- c c~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ x1- d d~, reuse diagrams. 
+INFO: Crossed process found for d d~ > x1+ x1- s s~, reuse diagrams. 
+INFO: Crossed process found for d s~ > x1+ x1- u c~, reuse diagrams. 
+INFO: Crossed process found for d s~ > x1+ x1- d s~, reuse diagrams. 
+INFO: Process s u > x1+ x1- u s added to mirror process u s > x1+ x1- u s 
+INFO: Process s u > x1+ x1- c d added to mirror process u s > x1+ x1- c d 
+INFO: Process s c > x1+ x1- c s added to mirror process c s > x1+ x1- c s 
+INFO: Process s d > x1+ x1- d s added to mirror process d s > x1+ x1- d s 
+INFO: Process s d > x1- x1- u c added to mirror process d s > x1- x1- u c 
+INFO: Trying process: s s > x1+ x1- d d QCD=0 @5  
+INFO: Trying process: s s > x1+ x1- d s QCD=0 @5  
+INFO: Trying process: s s > x1+ x1- s s QCD=0 @5  
+INFO: Process has 132 diagrams 
+INFO: Trying process: s s > x1- x1- u u QCD=0 @5  
+INFO: Trying process: s s > x1- x1- u c QCD=0 @5  
+INFO: Trying process: s s > x1- x1- c c QCD=0 @5  
+INFO: Process has 152 diagrams 
+INFO: Crossed process found for s u~ > x1+ x1- s u~, reuse diagrams. 
+INFO: Crossed process found for s u~ > x1- x1- c d~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1+ x1- d u~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1+ x1- s c~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- x1- u d~, reuse diagrams. 
+INFO: Crossed process found for s c~ > x1- x1- c s~, reuse diagrams. 
+INFO: Crossed process found for s d~ > x1+ x1- c u~, reuse diagrams. 
+INFO: Crossed process found for s d~ > x1+ x1- s d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ x1- u u~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ x1- c c~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ x1- d d~, reuse diagrams. 
+INFO: Crossed process found for s s~ > x1+ x1- s s~, reuse diagrams. 
+INFO: Process u~ u > x1+ x1- u u~ added to mirror process u u~ > x1+ x1- u u~ 
+INFO: Process u~ u > x1+ x1- c c~ added to mirror process u u~ > x1+ x1- c c~ 
+INFO: Process u~ u > x1+ x1- d d~ added to mirror process u u~ > x1+ x1- d d~ 
+INFO: Process u~ u > x1+ x1- s s~ added to mirror process u u~ > x1+ x1- s s~ 
+INFO: Process u~ c > x1+ x1- c u~ added to mirror process c u~ > x1+ x1- c u~ 
+INFO: Process u~ c > x1+ x1- s d~ added to mirror process c u~ > x1+ x1- s d~ 
+INFO: Process u~ d > x1+ x1- d u~ added to mirror process d u~ > x1+ x1- d u~ 
+INFO: Process u~ d > x1+ x1- s c~ added to mirror process d u~ > x1+ x1- s c~ 
+INFO: Process u~ d > x1- x1- u d~ added to mirror process d u~ > x1- x1- u d~ 
+INFO: Process u~ d > x1- x1- c s~ added to mirror process d u~ > x1- x1- c s~ 
+INFO: Process u~ s > x1+ x1- s u~ added to mirror process s u~ > x1+ x1- s u~ 
+INFO: Process u~ s > x1- x1- c d~ added to mirror process s u~ > x1- x1- c d~ 
+INFO: Crossed process found for u~ u~ > x1+ x1- u~ u~, reuse diagrams. 
+INFO: Crossed process found for u~ u~ > x1- x1- d~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > x1+ x1- u~ c~, reuse diagrams. 
+INFO: Crossed process found for u~ c~ > x1- x1- d~ s~, reuse diagrams. 
+INFO: Crossed process found for u~ d~ > x1+ x1- u~ d~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > x1+ x1- u~ s~, reuse diagrams. 
+INFO: Crossed process found for u~ s~ > x1+ x1- c~ d~, reuse diagrams. 
+INFO: Process c~ u > x1+ x1- u c~ added to mirror process u c~ > x1+ x1- u c~ 
+INFO: Process c~ u > x1+ x1- d s~ added to mirror process u c~ > x1+ x1- d s~ 
+INFO: Process c~ c > x1+ x1- u u~ added to mirror process c c~ > x1+ x1- u u~ 
+INFO: Process c~ c > x1+ x1- c c~ added to mirror process c c~ > x1+ x1- c c~ 
+INFO: Process c~ c > x1+ x1- d d~ added to mirror process c c~ > x1+ x1- d d~ 
+INFO: Process c~ c > x1+ x1- s s~ added to mirror process c c~ > x1+ x1- s s~ 
+INFO: Process c~ d > x1+ x1- d c~ added to mirror process d c~ > x1+ x1- d c~ 
+INFO: Process c~ d > x1- x1- u s~ added to mirror process d c~ > x1- x1- u s~ 
+INFO: Process c~ s > x1+ x1- d u~ added to mirror process s c~ > x1+ x1- d u~ 
+INFO: Process c~ s > x1+ x1- s c~ added to mirror process s c~ > x1+ x1- s c~ 
+INFO: Process c~ s > x1- x1- u d~ added to mirror process s c~ > x1- x1- u d~ 
+INFO: Process c~ s > x1- x1- c s~ added to mirror process s c~ > x1- x1- c s~ 
+INFO: Process c~ u~ > x1+ x1- u~ c~ added to mirror process u~ c~ > x1+ x1- u~ c~ 
+INFO: Process c~ u~ > x1- x1- d~ s~ added to mirror process u~ c~ > x1- x1- d~ s~ 
+INFO: Crossed process found for c~ c~ > x1+ x1- c~ c~, reuse diagrams. 
+INFO: Crossed process found for c~ c~ > x1- x1- s~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > x1+ x1- u~ s~, reuse diagrams. 
+INFO: Crossed process found for c~ d~ > x1+ x1- c~ d~, reuse diagrams. 
+INFO: Crossed process found for c~ s~ > x1+ x1- c~ s~, reuse diagrams. 
+INFO: Process d~ u > x1+ x1+ d u~ added to mirror process u d~ > x1+ x1+ d u~ 
+INFO: Process d~ u > x1+ x1+ s c~ added to mirror process u d~ > x1+ x1+ s c~ 
+INFO: Process d~ u > x1+ x1- u d~ added to mirror process u d~ > x1+ x1- u d~ 
+INFO: Process d~ u > x1+ x1- c s~ added to mirror process u d~ > x1+ x1- c s~ 
+INFO: Process d~ c > x1+ x1+ s u~ added to mirror process c d~ > x1+ x1+ s u~ 
+INFO: Process d~ c > x1+ x1- c d~ added to mirror process c d~ > x1+ x1- c d~ 
+INFO: Process d~ d > x1+ x1- u u~ added to mirror process d d~ > x1+ x1- u u~ 
+INFO: Process d~ d > x1+ x1- c c~ added to mirror process d d~ > x1+ x1- c c~ 
+INFO: Process d~ d > x1+ x1- d d~ added to mirror process d d~ > x1+ x1- d d~ 
+INFO: Process d~ d > x1+ x1- s s~ added to mirror process d d~ > x1+ x1- s s~ 
+INFO: Process d~ s > x1+ x1- c u~ added to mirror process s d~ > x1+ x1- c u~ 
+INFO: Process d~ s > x1+ x1- s d~ added to mirror process s d~ > x1+ x1- s d~ 
+INFO: Process d~ u~ > x1+ x1- u~ d~ added to mirror process u~ d~ > x1+ x1- u~ d~ 
+INFO: Process d~ c~ > x1+ x1- u~ s~ added to mirror process c~ d~ > x1+ x1- u~ s~ 
+INFO: Process d~ c~ > x1+ x1- c~ d~ added to mirror process c~ d~ > x1+ x1- c~ d~ 
+INFO: Crossed process found for d~ d~ > x1+ x1+ u~ u~, reuse diagrams. 
+INFO: Crossed process found for d~ d~ > x1+ x1- d~ d~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > x1+ x1+ u~ c~, reuse diagrams. 
+INFO: Crossed process found for d~ s~ > x1+ x1- d~ s~, reuse diagrams. 
+INFO: Process s~ u > x1+ x1+ d c~ added to mirror process u s~ > x1+ x1+ d c~ 
+INFO: Process s~ u > x1+ x1- u s~ added to mirror process u s~ > x1+ x1- u s~ 
+INFO: Process s~ c > x1+ x1+ d u~ added to mirror process c s~ > x1+ x1+ d u~ 
+INFO: Process s~ c > x1+ x1+ s c~ added to mirror process c s~ > x1+ x1+ s c~ 
+INFO: Process s~ c > x1+ x1- u d~ added to mirror process c s~ > x1+ x1- u d~ 
+INFO: Process s~ c > x1+ x1- c s~ added to mirror process c s~ > x1+ x1- c s~ 
+INFO: Process s~ d > x1+ x1- u c~ added to mirror process d s~ > x1+ x1- u c~ 
+INFO: Process s~ d > x1+ x1- d s~ added to mirror process d s~ > x1+ x1- d s~ 
+INFO: Process s~ s > x1+ x1- u u~ added to mirror process s s~ > x1+ x1- u u~ 
+INFO: Process s~ s > x1+ x1- c c~ added to mirror process s s~ > x1+ x1- c c~ 
+INFO: Process s~ s > x1+ x1- d d~ added to mirror process s s~ > x1+ x1- d d~ 
+INFO: Process s~ s > x1+ x1- s s~ added to mirror process s s~ > x1+ x1- s s~ 
+INFO: Process s~ u~ > x1+ x1- u~ s~ added to mirror process u~ s~ > x1+ x1- u~ s~ 
+INFO: Process s~ u~ > x1+ x1- c~ d~ added to mirror process u~ s~ > x1+ x1- c~ d~ 
+INFO: Process s~ c~ > x1+ x1- c~ s~ added to mirror process c~ s~ > x1+ x1- c~ s~ 
+INFO: Process s~ d~ > x1+ x1+ u~ c~ added to mirror process d~ s~ > x1+ x1+ u~ c~ 
+INFO: Process s~ d~ > x1+ x1- d~ s~ added to mirror process d~ s~ > x1+ x1- d~ s~ 
+INFO: Crossed process found for s~ s~ > x1+ x1+ c~ c~, reuse diagrams. 
+INFO: Crossed process found for s~ s~ > x1+ x1- s~ s~, reuse diagrams. 
+84 processes with 7944 diagrams generated in 3.985 s
+Total: 364 processes with 64328 diagrams
+output /home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/ -f
+INFO: initialize a new directory: n2_100_ch1_75_n1_50 
+INFO: remove old information in n2_100_ch1_75_n1_50 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_ADDRESS = "es_CO.UTF-8",
+	LC_NAME = "es_CO.UTF-8",
+	LC_MONETARY = "es_CO.UTF-8",
+	LC_PAPER = "es_CO.UTF-8",
+	LC_IDENTIFICATION = "es_CO.UTF-8",
+	LC_TELEPHONE = "es_CO.UTF-8",
+	LC_MEASUREMENT = "es_CO.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_TIME = "es_CO.UTF-8",
+	LC_NUMERIC = "es_CO.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: u u > n2 n1 u u QCD=0 @3 
+INFO: Processing color information for process: u u > n2 n1 u u QCD=0 @3 
+INFO: Generating Helas calls for process: u u~ > n2 n1 u u~ QCD=0 @3 
+INFO: Processing color information for process: u u~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Helas calls for process: c c > n2 n1 c c QCD=0 @3 
+INFO: Reusing existing color information for process: c c > n2 n1 c c QCD=0 @3 
+INFO: Generating Helas calls for process: c c~ > n2 n1 c c~ QCD=0 @3 
+INFO: Reusing existing color information for process: c c~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Helas calls for process: d d > n2 n1 d d QCD=0 @3 
+INFO: Reusing existing color information for process: d d > n2 n1 d d QCD=0 @3 
+INFO: Generating Helas calls for process: d d~ > n2 n1 d d~ QCD=0 @3 
+INFO: Reusing existing color information for process: d d~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Helas calls for process: s s > n2 n1 s s QCD=0 @3 
+INFO: Reusing existing color information for process: s s > n2 n1 s s QCD=0 @3 
+INFO: Generating Helas calls for process: s s~ > n2 n1 s s~ QCD=0 @3 
+INFO: Reusing existing color information for process: s s~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Helas calls for process: u~ u~ > n2 n1 u~ u~ QCD=0 @3 
+INFO: Processing color information for process: u~ u~ > n2 n1 u~ u~ QCD=0 @3 
+INFO: Generating Helas calls for process: c~ c~ > n2 n1 c~ c~ QCD=0 @3 
+INFO: Reusing existing color information for process: c~ c~ > n2 n1 c~ c~ QCD=0 @3 
+INFO: Generating Helas calls for process: d~ d~ > n2 n1 d~ d~ QCD=0 @3 
+INFO: Reusing existing color information for process: d~ d~ > n2 n1 d~ d~ QCD=0 @3 
+INFO: Generating Helas calls for process: s~ s~ > n2 n1 s~ s~ QCD=0 @3 
+INFO: Reusing existing color information for process: s~ s~ > n2 n1 s~ s~ QCD=0 @3 
+INFO: Generating Helas calls for process: u d > n2 n1 u d QCD=0 @3 
+INFO: Processing color information for process: u d > n2 n1 u d QCD=0 @3 
+INFO: Generating Helas calls for process: u u~ > n2 n1 d d~ QCD=0 @3 
+INFO: Processing color information for process: u u~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Helas calls for process: u d~ > n2 n1 u d~ QCD=0 @3 
+INFO: Processing color information for process: u d~ > n2 n1 u d~ QCD=0 @3 
+INFO: Generating Helas calls for process: c s > n2 n1 c s QCD=0 @3 
+INFO: Reusing existing color information for process: c s > n2 n1 c s QCD=0 @3 
+INFO: Generating Helas calls for process: c c~ > n2 n1 s s~ QCD=0 @3 
+INFO: Reusing existing color information for process: c c~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Helas calls for process: c s~ > n2 n1 c s~ QCD=0 @3 
+INFO: Reusing existing color information for process: c s~ > n2 n1 c s~ QCD=0 @3 
+INFO: Generating Helas calls for process: d u~ > n2 n1 d u~ QCD=0 @3 
+INFO: Processing color information for process: d u~ > n2 n1 d u~ QCD=0 @3 
+INFO: Generating Helas calls for process: d d~ > n2 n1 u u~ QCD=0 @3 
+INFO: Processing color information for process: d d~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Helas calls for process: s c~ > n2 n1 s c~ QCD=0 @3 
+INFO: Reusing existing color information for process: s c~ > n2 n1 s c~ QCD=0 @3 
+INFO: Generating Helas calls for process: s s~ > n2 n1 c c~ QCD=0 @3 
+INFO: Reusing existing color information for process: s s~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Helas calls for process: u~ d~ > n2 n1 u~ d~ QCD=0 @3 
+INFO: Processing color information for process: u~ d~ > n2 n1 u~ d~ QCD=0 @3 
+INFO: Generating Helas calls for process: c~ s~ > n2 n1 c~ s~ QCD=0 @3 
+INFO: Reusing existing color information for process: c~ s~ > n2 n1 c~ s~ QCD=0 @3 
+INFO: Generating Helas calls for process: u c > n2 n1 u c QCD=0 @3 
+INFO: Processing color information for process: u c > n2 n1 u c QCD=0 @3 
+INFO: Generating Helas calls for process: u s > n2 n1 u s QCD=0 @3 
+INFO: Reusing existing color information for process: u s > n2 n1 u s QCD=0 @3 
+INFO: Generating Helas calls for process: u u~ > n2 n1 c c~ QCD=0 @3 
+INFO: Processing color information for process: u u~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Helas calls for process: u u~ > n2 n1 s s~ QCD=0 @3 
+INFO: Reusing existing color information for process: u u~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Helas calls for process: u c~ > n2 n1 u c~ QCD=0 @3 
+INFO: Processing color information for process: u c~ > n2 n1 u c~ QCD=0 @3 
+INFO: Generating Helas calls for process: u s~ > n2 n1 u s~ QCD=0 @3 
+INFO: Reusing existing color information for process: u s~ > n2 n1 u s~ QCD=0 @3 
+INFO: Generating Helas calls for process: c d > n2 n1 c d QCD=0 @3 
+INFO: Reusing existing color information for process: c d > n2 n1 c d QCD=0 @3 
+INFO: Generating Helas calls for process: c u~ > n2 n1 c u~ QCD=0 @3 
+INFO: Processing color information for process: c u~ > n2 n1 c u~ QCD=0 @3 
+INFO: Generating Helas calls for process: c c~ > n2 n1 u u~ QCD=0 @3 
+INFO: Processing color information for process: c c~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Helas calls for process: c c~ > n2 n1 d d~ QCD=0 @3 
+INFO: Reusing existing color information for process: c c~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Helas calls for process: c d~ > n2 n1 c d~ QCD=0 @3 
+INFO: Reusing existing color information for process: c d~ > n2 n1 c d~ QCD=0 @3 
+INFO: Generating Helas calls for process: d s > n2 n1 d s QCD=0 @3 
+INFO: Reusing existing color information for process: d s > n2 n1 d s QCD=0 @3 
+INFO: Generating Helas calls for process: d c~ > n2 n1 d c~ QCD=0 @3 
+INFO: Reusing existing color information for process: d c~ > n2 n1 d c~ QCD=0 @3 
+INFO: Generating Helas calls for process: d d~ > n2 n1 c c~ QCD=0 @3 
+INFO: Reusing existing color information for process: d d~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Helas calls for process: d d~ > n2 n1 s s~ QCD=0 @3 
+INFO: Reusing existing color information for process: d d~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Helas calls for process: d s~ > n2 n1 d s~ QCD=0 @3 
+INFO: Reusing existing color information for process: d s~ > n2 n1 d s~ QCD=0 @3 
+INFO: Generating Helas calls for process: s u~ > n2 n1 s u~ QCD=0 @3 
+INFO: Reusing existing color information for process: s u~ > n2 n1 s u~ QCD=0 @3 
+INFO: Generating Helas calls for process: s d~ > n2 n1 s d~ QCD=0 @3 
+INFO: Reusing existing color information for process: s d~ > n2 n1 s d~ QCD=0 @3 
+INFO: Generating Helas calls for process: s s~ > n2 n1 u u~ QCD=0 @3 
+INFO: Reusing existing color information for process: s s~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Helas calls for process: s s~ > n2 n1 d d~ QCD=0 @3 
+INFO: Reusing existing color information for process: s s~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Helas calls for process: u~ c~ > n2 n1 u~ c~ QCD=0 @3 
+INFO: Processing color information for process: u~ c~ > n2 n1 u~ c~ QCD=0 @3 
+INFO: Generating Helas calls for process: u~ s~ > n2 n1 u~ s~ QCD=0 @3 
+INFO: Reusing existing color information for process: u~ s~ > n2 n1 u~ s~ QCD=0 @3 
+INFO: Generating Helas calls for process: c~ d~ > n2 n1 c~ d~ QCD=0 @3 
+INFO: Reusing existing color information for process: c~ d~ > n2 n1 c~ d~ QCD=0 @3 
+INFO: Generating Helas calls for process: d~ s~ > n2 n1 d~ s~ QCD=0 @3 
+INFO: Reusing existing color information for process: d~ s~ > n2 n1 d~ s~ QCD=0 @3 
+INFO: Generating Helas calls for process: u s > n2 n1 c d QCD=0 @3 
+INFO: Processing color information for process: u s > n2 n1 c d QCD=0 @3 
+INFO: Generating Helas calls for process: u c~ > n2 n1 d s~ QCD=0 @3 
+INFO: Processing color information for process: u c~ > n2 n1 d s~ QCD=0 @3 
+INFO: Generating Helas calls for process: u d~ > n2 n1 c s~ QCD=0 @3 
+INFO: Processing color information for process: u d~ > n2 n1 c s~ QCD=0 @3 
+INFO: Generating Helas calls for process: c d > n2 n1 u s QCD=0 @3 
+INFO: Reusing existing color information for process: c d > n2 n1 u s QCD=0 @3 
+INFO: Generating Helas calls for process: c u~ > n2 n1 s d~ QCD=0 @3 
+INFO: Reusing existing color information for process: c u~ > n2 n1 s d~ QCD=0 @3 
+INFO: Generating Helas calls for process: c s~ > n2 n1 u d~ QCD=0 @3 
+INFO: Reusing existing color information for process: c s~ > n2 n1 u d~ QCD=0 @3 
+INFO: Generating Helas calls for process: d u~ > n2 n1 s c~ QCD=0 @3 
+INFO: Processing color information for process: d u~ > n2 n1 s c~ QCD=0 @3 
+INFO: Generating Helas calls for process: d s~ > n2 n1 u c~ QCD=0 @3 
+INFO: Processing color information for process: d s~ > n2 n1 u c~ QCD=0 @3 
+INFO: Generating Helas calls for process: s c~ > n2 n1 d u~ QCD=0 @3 
+INFO: Reusing existing color information for process: s c~ > n2 n1 d u~ QCD=0 @3 
+INFO: Generating Helas calls for process: s d~ > n2 n1 c u~ QCD=0 @3 
+INFO: Reusing existing color information for process: s d~ > n2 n1 c u~ QCD=0 @3 
+INFO: Generating Helas calls for process: u~ s~ > n2 n1 c~ d~ QCD=0 @3 
+INFO: Processing color information for process: u~ s~ > n2 n1 c~ d~ QCD=0 @3 
+INFO: Generating Helas calls for process: c~ d~ > n2 n1 u~ s~ QCD=0 @3 
+INFO: Reusing existing color information for process: c~ d~ > n2 n1 u~ s~ QCD=0 @3 
+INFO: Generating Helas calls for process: u u > n2 n2 u u QCD=0 @4 
+INFO: Processing color information for process: u u > n2 n2 u u QCD=0 @4 
+INFO: Generating Helas calls for process: u u~ > n2 n2 u u~ QCD=0 @4 
+INFO: Processing color information for process: u u~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Helas calls for process: c c > n2 n2 c c QCD=0 @4 
+INFO: Reusing existing color information for process: c c > n2 n2 c c QCD=0 @4 
+INFO: Generating Helas calls for process: c c~ > n2 n2 c c~ QCD=0 @4 
+INFO: Reusing existing color information for process: c c~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Helas calls for process: d d > n2 n2 d d QCD=0 @4 
+INFO: Reusing existing color information for process: d d > n2 n2 d d QCD=0 @4 
+INFO: Generating Helas calls for process: d d~ > n2 n2 d d~ QCD=0 @4 
+INFO: Reusing existing color information for process: d d~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Helas calls for process: s s > n2 n2 s s QCD=0 @4 
+INFO: Reusing existing color information for process: s s > n2 n2 s s QCD=0 @4 
+INFO: Generating Helas calls for process: s s~ > n2 n2 s s~ QCD=0 @4 
+INFO: Reusing existing color information for process: s s~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Helas calls for process: u~ u~ > n2 n2 u~ u~ QCD=0 @4 
+INFO: Processing color information for process: u~ u~ > n2 n2 u~ u~ QCD=0 @4 
+INFO: Generating Helas calls for process: c~ c~ > n2 n2 c~ c~ QCD=0 @4 
+INFO: Reusing existing color information for process: c~ c~ > n2 n2 c~ c~ QCD=0 @4 
+INFO: Generating Helas calls for process: d~ d~ > n2 n2 d~ d~ QCD=0 @4 
+INFO: Reusing existing color information for process: d~ d~ > n2 n2 d~ d~ QCD=0 @4 
+INFO: Generating Helas calls for process: s~ s~ > n2 n2 s~ s~ QCD=0 @4 
+INFO: Reusing existing color information for process: s~ s~ > n2 n2 s~ s~ QCD=0 @4 
+INFO: Generating Helas calls for process: u d > n2 n2 u d QCD=0 @4 
+INFO: Processing color information for process: u d > n2 n2 u d QCD=0 @4 
+INFO: Generating Helas calls for process: u u~ > n2 n2 d d~ QCD=0 @4 
+INFO: Processing color information for process: u u~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Helas calls for process: u d~ > n2 n2 u d~ QCD=0 @4 
+INFO: Processing color information for process: u d~ > n2 n2 u d~ QCD=0 @4 
+INFO: Generating Helas calls for process: c s > n2 n2 c s QCD=0 @4 
+INFO: Reusing existing color information for process: c s > n2 n2 c s QCD=0 @4 
+INFO: Generating Helas calls for process: c c~ > n2 n2 s s~ QCD=0 @4 
+INFO: Reusing existing color information for process: c c~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Helas calls for process: c s~ > n2 n2 c s~ QCD=0 @4 
+INFO: Reusing existing color information for process: c s~ > n2 n2 c s~ QCD=0 @4 
+INFO: Generating Helas calls for process: d u~ > n2 n2 d u~ QCD=0 @4 
+INFO: Processing color information for process: d u~ > n2 n2 d u~ QCD=0 @4 
+INFO: Generating Helas calls for process: d d~ > n2 n2 u u~ QCD=0 @4 
+INFO: Processing color information for process: d d~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Helas calls for process: s c~ > n2 n2 s c~ QCD=0 @4 
+INFO: Reusing existing color information for process: s c~ > n2 n2 s c~ QCD=0 @4 
+INFO: Generating Helas calls for process: s s~ > n2 n2 c c~ QCD=0 @4 
+INFO: Reusing existing color information for process: s s~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Helas calls for process: u~ d~ > n2 n2 u~ d~ QCD=0 @4 
+INFO: Processing color information for process: u~ d~ > n2 n2 u~ d~ QCD=0 @4 
+INFO: Generating Helas calls for process: c~ s~ > n2 n2 c~ s~ QCD=0 @4 
+INFO: Reusing existing color information for process: c~ s~ > n2 n2 c~ s~ QCD=0 @4 
+INFO: Generating Helas calls for process: u c > n2 n2 u c QCD=0 @4 
+INFO: Processing color information for process: u c > n2 n2 u c QCD=0 @4 
+INFO: Generating Helas calls for process: u s > n2 n2 u s QCD=0 @4 
+INFO: Reusing existing color information for process: u s > n2 n2 u s QCD=0 @4 
+INFO: Generating Helas calls for process: u u~ > n2 n2 c c~ QCD=0 @4 
+INFO: Processing color information for process: u u~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Helas calls for process: u u~ > n2 n2 s s~ QCD=0 @4 
+INFO: Reusing existing color information for process: u u~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Helas calls for process: u c~ > n2 n2 u c~ QCD=0 @4 
+INFO: Processing color information for process: u c~ > n2 n2 u c~ QCD=0 @4 
+INFO: Generating Helas calls for process: u s~ > n2 n2 u s~ QCD=0 @4 
+INFO: Reusing existing color information for process: u s~ > n2 n2 u s~ QCD=0 @4 
+INFO: Generating Helas calls for process: c d > n2 n2 c d QCD=0 @4 
+INFO: Reusing existing color information for process: c d > n2 n2 c d QCD=0 @4 
+INFO: Generating Helas calls for process: c u~ > n2 n2 c u~ QCD=0 @4 
+INFO: Processing color information for process: c u~ > n2 n2 c u~ QCD=0 @4 
+INFO: Generating Helas calls for process: c c~ > n2 n2 u u~ QCD=0 @4 
+INFO: Processing color information for process: c c~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Helas calls for process: c c~ > n2 n2 d d~ QCD=0 @4 
+INFO: Reusing existing color information for process: c c~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Helas calls for process: c d~ > n2 n2 c d~ QCD=0 @4 
+INFO: Reusing existing color information for process: c d~ > n2 n2 c d~ QCD=0 @4 
+INFO: Generating Helas calls for process: d s > n2 n2 d s QCD=0 @4 
+INFO: Reusing existing color information for process: d s > n2 n2 d s QCD=0 @4 
+INFO: Generating Helas calls for process: d c~ > n2 n2 d c~ QCD=0 @4 
+INFO: Reusing existing color information for process: d c~ > n2 n2 d c~ QCD=0 @4 
+INFO: Generating Helas calls for process: d d~ > n2 n2 c c~ QCD=0 @4 
+INFO: Reusing existing color information for process: d d~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Helas calls for process: d d~ > n2 n2 s s~ QCD=0 @4 
+INFO: Reusing existing color information for process: d d~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Helas calls for process: d s~ > n2 n2 d s~ QCD=0 @4 
+INFO: Reusing existing color information for process: d s~ > n2 n2 d s~ QCD=0 @4 
+INFO: Generating Helas calls for process: s u~ > n2 n2 s u~ QCD=0 @4 
+INFO: Reusing existing color information for process: s u~ > n2 n2 s u~ QCD=0 @4 
+INFO: Generating Helas calls for process: s d~ > n2 n2 s d~ QCD=0 @4 
+INFO: Reusing existing color information for process: s d~ > n2 n2 s d~ QCD=0 @4 
+INFO: Generating Helas calls for process: s s~ > n2 n2 u u~ QCD=0 @4 
+INFO: Reusing existing color information for process: s s~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Helas calls for process: s s~ > n2 n2 d d~ QCD=0 @4 
+INFO: Reusing existing color information for process: s s~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Helas calls for process: u~ c~ > n2 n2 u~ c~ QCD=0 @4 
+INFO: Processing color information for process: u~ c~ > n2 n2 u~ c~ QCD=0 @4 
+INFO: Generating Helas calls for process: u~ s~ > n2 n2 u~ s~ QCD=0 @4 
+INFO: Reusing existing color information for process: u~ s~ > n2 n2 u~ s~ QCD=0 @4 
+INFO: Generating Helas calls for process: c~ d~ > n2 n2 c~ d~ QCD=0 @4 
+INFO: Reusing existing color information for process: c~ d~ > n2 n2 c~ d~ QCD=0 @4 
+INFO: Generating Helas calls for process: d~ s~ > n2 n2 d~ s~ QCD=0 @4 
+INFO: Reusing existing color information for process: d~ s~ > n2 n2 d~ s~ QCD=0 @4 
+INFO: Generating Helas calls for process: u s > n2 n2 c d QCD=0 @4 
+INFO: Processing color information for process: u s > n2 n2 c d QCD=0 @4 
+INFO: Generating Helas calls for process: u c~ > n2 n2 d s~ QCD=0 @4 
+INFO: Processing color information for process: u c~ > n2 n2 d s~ QCD=0 @4 
+INFO: Generating Helas calls for process: u d~ > n2 n2 c s~ QCD=0 @4 
+INFO: Processing color information for process: u d~ > n2 n2 c s~ QCD=0 @4 
+INFO: Generating Helas calls for process: c d > n2 n2 u s QCD=0 @4 
+INFO: Reusing existing color information for process: c d > n2 n2 u s QCD=0 @4 
+INFO: Generating Helas calls for process: c u~ > n2 n2 s d~ QCD=0 @4 
+INFO: Reusing existing color information for process: c u~ > n2 n2 s d~ QCD=0 @4 
+INFO: Generating Helas calls for process: c s~ > n2 n2 u d~ QCD=0 @4 
+INFO: Reusing existing color information for process: c s~ > n2 n2 u d~ QCD=0 @4 
+INFO: Generating Helas calls for process: d u~ > n2 n2 s c~ QCD=0 @4 
+INFO: Processing color information for process: d u~ > n2 n2 s c~ QCD=0 @4 
+INFO: Generating Helas calls for process: d s~ > n2 n2 u c~ QCD=0 @4 
+INFO: Processing color information for process: d s~ > n2 n2 u c~ QCD=0 @4 
+INFO: Generating Helas calls for process: s c~ > n2 n2 d u~ QCD=0 @4 
+INFO: Reusing existing color information for process: s c~ > n2 n2 d u~ QCD=0 @4 
+INFO: Generating Helas calls for process: s d~ > n2 n2 c u~ QCD=0 @4 
+INFO: Reusing existing color information for process: s d~ > n2 n2 c u~ QCD=0 @4 
+INFO: Generating Helas calls for process: u~ s~ > n2 n2 c~ d~ QCD=0 @4 
+INFO: Processing color information for process: u~ s~ > n2 n2 c~ d~ QCD=0 @4 
+INFO: Generating Helas calls for process: c~ d~ > n2 n2 u~ s~ QCD=0 @4 
+INFO: Reusing existing color information for process: c~ d~ > n2 n2 u~ s~ QCD=0 @4 
+INFO: Generating Helas calls for process: u u > x1+ n2 u d QCD=0 @1 
+INFO: Processing color information for process: u u > x1+ n2 u d QCD=0 @1 
+INFO: Generating Helas calls for process: u d > x1+ n2 d d QCD=0 @1 
+INFO: Processing color information for process: u d > x1+ n2 d d QCD=0 @1 
+INFO: Generating Helas calls for process: u d > x1- n2 u u QCD=0 @1 
+INFO: Processing color information for process: u d > x1- n2 u u QCD=0 @1 
+INFO: Generating Helas calls for process: u u~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Processing color information for process: u u~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Helas calls for process: u u~ > x1- n2 u d~ QCD=0 @1 
+INFO: Processing color information for process: u u~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Helas calls for process: u d~ > x1+ n2 u u~ QCD=0 @1 
+INFO: Processing color information for process: u d~ > x1+ n2 u u~ QCD=0 @1 
+INFO: Generating Helas calls for process: u d~ > x1+ n2 d d~ QCD=0 @1 
+INFO: Processing color information for process: u d~ > x1+ n2 d d~ QCD=0 @1 
+INFO: Generating Helas calls for process: c c > x1+ n2 c s QCD=0 @1 
+INFO: Reusing existing color information for process: c c > x1+ n2 c s QCD=0 @1 
+INFO: Generating Helas calls for process: c s > x1+ n2 s s QCD=0 @1 
+INFO: Reusing existing color information for process: c s > x1+ n2 s s QCD=0 @1 
+INFO: Generating Helas calls for process: c s > x1- n2 c c QCD=0 @1 
+INFO: Reusing existing color information for process: c s > x1- n2 c c QCD=0 @1 
+INFO: Generating Helas calls for process: c c~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Reusing existing color information for process: c c~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Helas calls for process: c c~ > x1- n2 c s~ QCD=0 @1 
+INFO: Reusing existing color information for process: c c~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Helas calls for process: c s~ > x1+ n2 c c~ QCD=0 @1 
+INFO: Reusing existing color information for process: c s~ > x1+ n2 c c~ QCD=0 @1 
+INFO: Generating Helas calls for process: c s~ > x1+ n2 s s~ QCD=0 @1 
+INFO: Reusing existing color information for process: c s~ > x1+ n2 s s~ QCD=0 @1 
+INFO: Generating Helas calls for process: d d > x1- n2 u d QCD=0 @1 
+INFO: Processing color information for process: d d > x1- n2 u d QCD=0 @1 
+INFO: Generating Helas calls for process: d u~ > x1- n2 u u~ QCD=0 @1 
+INFO: Processing color information for process: d u~ > x1- n2 u u~ QCD=0 @1 
+INFO: Generating Helas calls for process: d u~ > x1- n2 d d~ QCD=0 @1 
+INFO: Processing color information for process: d u~ > x1- n2 d d~ QCD=0 @1 
+INFO: Generating Helas calls for process: d d~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Processing color information for process: d d~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Helas calls for process: d d~ > x1- n2 u d~ QCD=0 @1 
+INFO: Processing color information for process: d d~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Helas calls for process: s s > x1- n2 c s QCD=0 @1 
+INFO: Reusing existing color information for process: s s > x1- n2 c s QCD=0 @1 
+INFO: Generating Helas calls for process: s c~ > x1- n2 c c~ QCD=0 @1 
+INFO: Reusing existing color information for process: s c~ > x1- n2 c c~ QCD=0 @1 
+INFO: Generating Helas calls for process: s c~ > x1- n2 s s~ QCD=0 @1 
+INFO: Reusing existing color information for process: s c~ > x1- n2 s s~ QCD=0 @1 
+INFO: Generating Helas calls for process: s s~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Reusing existing color information for process: s s~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Helas calls for process: s s~ > x1- n2 c s~ QCD=0 @1 
+INFO: Reusing existing color information for process: s s~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Helas calls for process: u~ u~ > x1- n2 u~ d~ QCD=0 @1 
+INFO: Processing color information for process: u~ u~ > x1- n2 u~ d~ QCD=0 @1 
+INFO: Generating Helas calls for process: u~ d~ > x1+ n2 u~ u~ QCD=0 @1 
+INFO: Processing color information for process: u~ d~ > x1+ n2 u~ u~ QCD=0 @1 
+INFO: Generating Helas calls for process: u~ d~ > x1- n2 d~ d~ QCD=0 @1 
+INFO: Processing color information for process: u~ d~ > x1- n2 d~ d~ QCD=0 @1 
+INFO: Generating Helas calls for process: c~ c~ > x1- n2 c~ s~ QCD=0 @1 
+INFO: Reusing existing color information for process: c~ c~ > x1- n2 c~ s~ QCD=0 @1 
+INFO: Generating Helas calls for process: c~ s~ > x1+ n2 c~ c~ QCD=0 @1 
+INFO: Reusing existing color information for process: c~ s~ > x1+ n2 c~ c~ QCD=0 @1 
+INFO: Generating Helas calls for process: c~ s~ > x1- n2 s~ s~ QCD=0 @1 
+INFO: Reusing existing color information for process: c~ s~ > x1- n2 s~ s~ QCD=0 @1 
+INFO: Generating Helas calls for process: d~ d~ > x1+ n2 u~ d~ QCD=0 @1 
+INFO: Processing color information for process: d~ d~ > x1+ n2 u~ d~ QCD=0 @1 
+INFO: Generating Helas calls for process: s~ s~ > x1+ n2 c~ s~ QCD=0 @1 
+INFO: Reusing existing color information for process: s~ s~ > x1+ n2 c~ s~ QCD=0 @1 
+INFO: Generating Helas calls for process: u c > x1+ n2 u s QCD=0 @1 
+INFO: Processing color information for process: u c > x1+ n2 u s QCD=0 @1 
+INFO: Generating Helas calls for process: u c > x1+ n2 c d QCD=0 @1 
+INFO: Processing color information for process: u c > x1+ n2 c d QCD=0 @1 
+INFO: Generating Helas calls for process: u s > x1+ n2 d s QCD=0 @1 
+INFO: Processing color information for process: u s > x1+ n2 d s QCD=0 @1 
+INFO: Generating Helas calls for process: u s > x1- n2 u c QCD=0 @1 
+INFO: Processing color information for process: u s > x1- n2 u c QCD=0 @1 
+INFO: Generating Helas calls for process: u u~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Processing color information for process: u u~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Helas calls for process: u u~ > x1- n2 c s~ QCD=0 @1 
+INFO: Processing color information for process: u u~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Helas calls for process: u c~ > x1+ n2 d c~ QCD=0 @1 
+INFO: Processing color information for process: u c~ > x1+ n2 d c~ QCD=0 @1 
+INFO: Generating Helas calls for process: u c~ > x1- n2 u s~ QCD=0 @1 
+INFO: Processing color information for process: u c~ > x1- n2 u s~ QCD=0 @1 
+INFO: Generating Helas calls for process: u d~ > x1+ n2 c c~ QCD=0 @1 
+INFO: Processing color information for process: u d~ > x1+ n2 c c~ QCD=0 @1 
+INFO: Generating Helas calls for process: u d~ > x1+ n2 s s~ QCD=0 @1 
+INFO: Processing color information for process: u d~ > x1+ n2 s s~ QCD=0 @1 
+INFO: Generating Helas calls for process: u s~ > x1+ n2 u c~ QCD=0 @1 
+INFO: Processing color information for process: u s~ > x1+ n2 u c~ QCD=0 @1 
+INFO: Generating Helas calls for process: u s~ > x1+ n2 d s~ QCD=0 @1 
+INFO: Processing color information for process: u s~ > x1+ n2 d s~ QCD=0 @1 
+INFO: Generating Helas calls for process: c d > x1+ n2 d s QCD=0 @1 
+INFO: Processing color information for process: c d > x1+ n2 d s QCD=0 @1 
+INFO: Generating Helas calls for process: c d > x1- n2 u c QCD=0 @1 
+INFO: Processing color information for process: c d > x1- n2 u c QCD=0 @1 
+INFO: Generating Helas calls for process: c u~ > x1+ n2 s u~ QCD=0 @1 
+INFO: Processing color information for process: c u~ > x1+ n2 s u~ QCD=0 @1 
+INFO: Generating Helas calls for process: c u~ > x1- n2 c d~ QCD=0 @1 
+INFO: Reusing existing color information for process: c u~ > x1- n2 c d~ QCD=0 @1 
+INFO: Generating Helas calls for process: c c~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Processing color information for process: c c~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Helas calls for process: c c~ > x1- n2 u d~ QCD=0 @1 
+INFO: Reusing existing color information for process: c c~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Helas calls for process: c d~ > x1+ n2 c u~ QCD=0 @1 
+INFO: Processing color information for process: c d~ > x1+ n2 c u~ QCD=0 @1 
+INFO: Generating Helas calls for process: c d~ > x1+ n2 s d~ QCD=0 @1 
+INFO: Reusing existing color information for process: c d~ > x1+ n2 s d~ QCD=0 @1 
+INFO: Generating Helas calls for process: c s~ > x1+ n2 u u~ QCD=0 @1 
+INFO: Processing color information for process: c s~ > x1+ n2 u u~ QCD=0 @1 
+INFO: Generating Helas calls for process: c s~ > x1+ n2 d d~ QCD=0 @1 
+INFO: Reusing existing color information for process: c s~ > x1+ n2 d d~ QCD=0 @1 
+INFO: Generating Helas calls for process: d s > x1- n2 u s QCD=0 @1 
+INFO: Processing color information for process: d s > x1- n2 u s QCD=0 @1 
+INFO: Generating Helas calls for process: d s > x1- n2 c d QCD=0 @1 
+INFO: Processing color information for process: d s > x1- n2 c d QCD=0 @1 
+INFO: Generating Helas calls for process: d u~ > x1- n2 c c~ QCD=0 @1 
+INFO: Processing color information for process: d u~ > x1- n2 c c~ QCD=0 @1 
+INFO: Generating Helas calls for process: d u~ > x1- n2 s s~ QCD=0 @1 
+INFO: Processing color information for process: d u~ > x1- n2 s s~ QCD=0 @1 
+INFO: Generating Helas calls for process: d c~ > x1- n2 u c~ QCD=0 @1 
+INFO: Processing color information for process: d c~ > x1- n2 u c~ QCD=0 @1 
+INFO: Generating Helas calls for process: d c~ > x1- n2 d s~ QCD=0 @1 
+INFO: Processing color information for process: d c~ > x1- n2 d s~ QCD=0 @1 
+INFO: Generating Helas calls for process: d d~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Processing color information for process: d d~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Helas calls for process: d d~ > x1- n2 c s~ QCD=0 @1 
+INFO: Processing color information for process: d d~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Helas calls for process: d s~ > x1+ n2 d c~ QCD=0 @1 
+INFO: Processing color information for process: d s~ > x1+ n2 d c~ QCD=0 @1 
+INFO: Generating Helas calls for process: d s~ > x1- n2 u s~ QCD=0 @1 
+INFO: Processing color information for process: d s~ > x1- n2 u s~ QCD=0 @1 
+INFO: Generating Helas calls for process: s u~ > x1- n2 c u~ QCD=0 @1 
+INFO: Reusing existing color information for process: s u~ > x1- n2 c u~ QCD=0 @1 
+INFO: Generating Helas calls for process: s u~ > x1- n2 s d~ QCD=0 @1 
+INFO: Processing color information for process: s u~ > x1- n2 s d~ QCD=0 @1 
+INFO: Generating Helas calls for process: s c~ > x1- n2 u u~ QCD=0 @1 
+INFO: Reusing existing color information for process: s c~ > x1- n2 u u~ QCD=0 @1 
+INFO: Generating Helas calls for process: s c~ > x1- n2 d d~ QCD=0 @1 
+INFO: Processing color information for process: s c~ > x1- n2 d d~ QCD=0 @1 
+INFO: Generating Helas calls for process: s d~ > x1+ n2 s u~ QCD=0 @1 
+INFO: Reusing existing color information for process: s d~ > x1+ n2 s u~ QCD=0 @1 
+INFO: Generating Helas calls for process: s d~ > x1- n2 c d~ QCD=0 @1 
+INFO: Processing color information for process: s d~ > x1- n2 c d~ QCD=0 @1 
+INFO: Generating Helas calls for process: s s~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Reusing existing color information for process: s s~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Helas calls for process: s s~ > x1- n2 u d~ QCD=0 @1 
+INFO: Processing color information for process: s s~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Helas calls for process: u~ c~ > x1- n2 u~ s~ QCD=0 @1 
+INFO: Processing color information for process: u~ c~ > x1- n2 u~ s~ QCD=0 @1 
+INFO: Generating Helas calls for process: u~ c~ > x1- n2 c~ d~ QCD=0 @1 
+INFO: Processing color information for process: u~ c~ > x1- n2 c~ d~ QCD=0 @1 
+INFO: Generating Helas calls for process: u~ s~ > x1+ n2 u~ c~ QCD=0 @1 
+INFO: Processing color information for process: u~ s~ > x1+ n2 u~ c~ QCD=0 @1 
+INFO: Generating Helas calls for process: u~ s~ > x1- n2 d~ s~ QCD=0 @1 
+INFO: Processing color information for process: u~ s~ > x1- n2 d~ s~ QCD=0 @1 
+INFO: Generating Helas calls for process: c~ d~ > x1+ n2 u~ c~ QCD=0 @1 
+INFO: Processing color information for process: c~ d~ > x1+ n2 u~ c~ QCD=0 @1 
+INFO: Generating Helas calls for process: c~ d~ > x1- n2 d~ s~ QCD=0 @1 
+INFO: Processing color information for process: c~ d~ > x1- n2 d~ s~ QCD=0 @1 
+INFO: Generating Helas calls for process: d~ s~ > x1+ n2 u~ s~ QCD=0 @1 
+INFO: Processing color information for process: d~ s~ > x1+ n2 u~ s~ QCD=0 @1 
+INFO: Generating Helas calls for process: d~ s~ > x1+ n2 c~ d~ QCD=0 @1 
+INFO: Processing color information for process: d~ s~ > x1+ n2 c~ d~ QCD=0 @1 
+INFO: Generating Helas calls for process: u u > x1+ n1 u d QCD=0 @2 
+INFO: Processing color information for process: u u > x1+ n1 u d QCD=0 @2 
+INFO: Generating Helas calls for process: u d > x1+ n1 d d QCD=0 @2 
+INFO: Processing color information for process: u d > x1+ n1 d d QCD=0 @2 
+INFO: Generating Helas calls for process: u d > x1- n1 u u QCD=0 @2 
+INFO: Processing color information for process: u d > x1- n1 u u QCD=0 @2 
+INFO: Generating Helas calls for process: u u~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Processing color information for process: u u~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Helas calls for process: u u~ > x1- n1 u d~ QCD=0 @2 
+INFO: Processing color information for process: u u~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Helas calls for process: u d~ > x1+ n1 u u~ QCD=0 @2 
+INFO: Processing color information for process: u d~ > x1+ n1 u u~ QCD=0 @2 
+INFO: Generating Helas calls for process: u d~ > x1+ n1 d d~ QCD=0 @2 
+INFO: Processing color information for process: u d~ > x1+ n1 d d~ QCD=0 @2 
+INFO: Generating Helas calls for process: c c > x1+ n1 c s QCD=0 @2 
+INFO: Reusing existing color information for process: c c > x1+ n1 c s QCD=0 @2 
+INFO: Generating Helas calls for process: c s > x1+ n1 s s QCD=0 @2 
+INFO: Reusing existing color information for process: c s > x1+ n1 s s QCD=0 @2 
+INFO: Generating Helas calls for process: c s > x1- n1 c c QCD=0 @2 
+INFO: Reusing existing color information for process: c s > x1- n1 c c QCD=0 @2 
+INFO: Generating Helas calls for process: c c~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Reusing existing color information for process: c c~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Helas calls for process: c c~ > x1- n1 c s~ QCD=0 @2 
+INFO: Reusing existing color information for process: c c~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Helas calls for process: c s~ > x1+ n1 c c~ QCD=0 @2 
+INFO: Reusing existing color information for process: c s~ > x1+ n1 c c~ QCD=0 @2 
+INFO: Generating Helas calls for process: c s~ > x1+ n1 s s~ QCD=0 @2 
+INFO: Reusing existing color information for process: c s~ > x1+ n1 s s~ QCD=0 @2 
+INFO: Generating Helas calls for process: d d > x1- n1 u d QCD=0 @2 
+INFO: Processing color information for process: d d > x1- n1 u d QCD=0 @2 
+INFO: Generating Helas calls for process: d u~ > x1- n1 u u~ QCD=0 @2 
+INFO: Processing color information for process: d u~ > x1- n1 u u~ QCD=0 @2 
+INFO: Generating Helas calls for process: d u~ > x1- n1 d d~ QCD=0 @2 
+INFO: Processing color information for process: d u~ > x1- n1 d d~ QCD=0 @2 
+INFO: Generating Helas calls for process: d d~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Processing color information for process: d d~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Helas calls for process: d d~ > x1- n1 u d~ QCD=0 @2 
+INFO: Processing color information for process: d d~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Helas calls for process: s s > x1- n1 c s QCD=0 @2 
+INFO: Reusing existing color information for process: s s > x1- n1 c s QCD=0 @2 
+INFO: Generating Helas calls for process: s c~ > x1- n1 c c~ QCD=0 @2 
+INFO: Reusing existing color information for process: s c~ > x1- n1 c c~ QCD=0 @2 
+INFO: Generating Helas calls for process: s c~ > x1- n1 s s~ QCD=0 @2 
+INFO: Reusing existing color information for process: s c~ > x1- n1 s s~ QCD=0 @2 
+INFO: Generating Helas calls for process: s s~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Reusing existing color information for process: s s~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Helas calls for process: s s~ > x1- n1 c s~ QCD=0 @2 
+INFO: Reusing existing color information for process: s s~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Helas calls for process: u~ u~ > x1- n1 u~ d~ QCD=0 @2 
+INFO: Processing color information for process: u~ u~ > x1- n1 u~ d~ QCD=0 @2 
+INFO: Generating Helas calls for process: u~ d~ > x1+ n1 u~ u~ QCD=0 @2 
+INFO: Processing color information for process: u~ d~ > x1+ n1 u~ u~ QCD=0 @2 
+INFO: Generating Helas calls for process: u~ d~ > x1- n1 d~ d~ QCD=0 @2 
+INFO: Processing color information for process: u~ d~ > x1- n1 d~ d~ QCD=0 @2 
+INFO: Generating Helas calls for process: c~ c~ > x1- n1 c~ s~ QCD=0 @2 
+INFO: Reusing existing color information for process: c~ c~ > x1- n1 c~ s~ QCD=0 @2 
+INFO: Generating Helas calls for process: c~ s~ > x1+ n1 c~ c~ QCD=0 @2 
+INFO: Reusing existing color information for process: c~ s~ > x1+ n1 c~ c~ QCD=0 @2 
+INFO: Generating Helas calls for process: c~ s~ > x1- n1 s~ s~ QCD=0 @2 
+INFO: Reusing existing color information for process: c~ s~ > x1- n1 s~ s~ QCD=0 @2 
+INFO: Generating Helas calls for process: d~ d~ > x1+ n1 u~ d~ QCD=0 @2 
+INFO: Processing color information for process: d~ d~ > x1+ n1 u~ d~ QCD=0 @2 
+INFO: Generating Helas calls for process: s~ s~ > x1+ n1 c~ s~ QCD=0 @2 
+INFO: Reusing existing color information for process: s~ s~ > x1+ n1 c~ s~ QCD=0 @2 
+INFO: Generating Helas calls for process: u c > x1+ n1 u s QCD=0 @2 
+INFO: Processing color information for process: u c > x1+ n1 u s QCD=0 @2 
+INFO: Generating Helas calls for process: u c > x1+ n1 c d QCD=0 @2 
+INFO: Processing color information for process: u c > x1+ n1 c d QCD=0 @2 
+INFO: Generating Helas calls for process: u s > x1+ n1 d s QCD=0 @2 
+INFO: Processing color information for process: u s > x1+ n1 d s QCD=0 @2 
+INFO: Generating Helas calls for process: u s > x1- n1 u c QCD=0 @2 
+INFO: Processing color information for process: u s > x1- n1 u c QCD=0 @2 
+INFO: Generating Helas calls for process: u u~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Processing color information for process: u u~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Helas calls for process: u u~ > x1- n1 c s~ QCD=0 @2 
+INFO: Processing color information for process: u u~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Helas calls for process: u c~ > x1+ n1 d c~ QCD=0 @2 
+INFO: Processing color information for process: u c~ > x1+ n1 d c~ QCD=0 @2 
+INFO: Generating Helas calls for process: u c~ > x1- n1 u s~ QCD=0 @2 
+INFO: Processing color information for process: u c~ > x1- n1 u s~ QCD=0 @2 
+INFO: Generating Helas calls for process: u d~ > x1+ n1 c c~ QCD=0 @2 
+INFO: Processing color information for process: u d~ > x1+ n1 c c~ QCD=0 @2 
+INFO: Generating Helas calls for process: u d~ > x1+ n1 s s~ QCD=0 @2 
+INFO: Processing color information for process: u d~ > x1+ n1 s s~ QCD=0 @2 
+INFO: Generating Helas calls for process: u s~ > x1+ n1 u c~ QCD=0 @2 
+INFO: Processing color information for process: u s~ > x1+ n1 u c~ QCD=0 @2 
+INFO: Generating Helas calls for process: u s~ > x1+ n1 d s~ QCD=0 @2 
+INFO: Processing color information for process: u s~ > x1+ n1 d s~ QCD=0 @2 
+INFO: Generating Helas calls for process: c d > x1+ n1 d s QCD=0 @2 
+INFO: Processing color information for process: c d > x1+ n1 d s QCD=0 @2 
+INFO: Generating Helas calls for process: c d > x1- n1 u c QCD=0 @2 
+INFO: Processing color information for process: c d > x1- n1 u c QCD=0 @2 
+INFO: Generating Helas calls for process: c u~ > x1+ n1 s u~ QCD=0 @2 
+INFO: Processing color information for process: c u~ > x1+ n1 s u~ QCD=0 @2 
+INFO: Generating Helas calls for process: c u~ > x1- n1 c d~ QCD=0 @2 
+INFO: Reusing existing color information for process: c u~ > x1- n1 c d~ QCD=0 @2 
+INFO: Generating Helas calls for process: c c~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Processing color information for process: c c~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Helas calls for process: c c~ > x1- n1 u d~ QCD=0 @2 
+INFO: Reusing existing color information for process: c c~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Helas calls for process: c d~ > x1+ n1 c u~ QCD=0 @2 
+INFO: Processing color information for process: c d~ > x1+ n1 c u~ QCD=0 @2 
+INFO: Generating Helas calls for process: c d~ > x1+ n1 s d~ QCD=0 @2 
+INFO: Reusing existing color information for process: c d~ > x1+ n1 s d~ QCD=0 @2 
+INFO: Generating Helas calls for process: c s~ > x1+ n1 u u~ QCD=0 @2 
+INFO: Processing color information for process: c s~ > x1+ n1 u u~ QCD=0 @2 
+INFO: Generating Helas calls for process: c s~ > x1+ n1 d d~ QCD=0 @2 
+INFO: Reusing existing color information for process: c s~ > x1+ n1 d d~ QCD=0 @2 
+INFO: Generating Helas calls for process: d s > x1- n1 u s QCD=0 @2 
+INFO: Processing color information for process: d s > x1- n1 u s QCD=0 @2 
+INFO: Generating Helas calls for process: d s > x1- n1 c d QCD=0 @2 
+INFO: Processing color information for process: d s > x1- n1 c d QCD=0 @2 
+INFO: Generating Helas calls for process: d u~ > x1- n1 c c~ QCD=0 @2 
+INFO: Processing color information for process: d u~ > x1- n1 c c~ QCD=0 @2 
+INFO: Generating Helas calls for process: d u~ > x1- n1 s s~ QCD=0 @2 
+INFO: Processing color information for process: d u~ > x1- n1 s s~ QCD=0 @2 
+INFO: Generating Helas calls for process: d c~ > x1- n1 u c~ QCD=0 @2 
+INFO: Processing color information for process: d c~ > x1- n1 u c~ QCD=0 @2 
+INFO: Generating Helas calls for process: d c~ > x1- n1 d s~ QCD=0 @2 
+INFO: Processing color information for process: d c~ > x1- n1 d s~ QCD=0 @2 
+INFO: Generating Helas calls for process: d d~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Processing color information for process: d d~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Helas calls for process: d d~ > x1- n1 c s~ QCD=0 @2 
+INFO: Processing color information for process: d d~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Helas calls for process: d s~ > x1+ n1 d c~ QCD=0 @2 
+INFO: Processing color information for process: d s~ > x1+ n1 d c~ QCD=0 @2 
+INFO: Generating Helas calls for process: d s~ > x1- n1 u s~ QCD=0 @2 
+INFO: Processing color information for process: d s~ > x1- n1 u s~ QCD=0 @2 
+INFO: Generating Helas calls for process: s u~ > x1- n1 c u~ QCD=0 @2 
+INFO: Reusing existing color information for process: s u~ > x1- n1 c u~ QCD=0 @2 
+INFO: Generating Helas calls for process: s u~ > x1- n1 s d~ QCD=0 @2 
+INFO: Processing color information for process: s u~ > x1- n1 s d~ QCD=0 @2 
+INFO: Generating Helas calls for process: s c~ > x1- n1 u u~ QCD=0 @2 
+INFO: Reusing existing color information for process: s c~ > x1- n1 u u~ QCD=0 @2 
+INFO: Generating Helas calls for process: s c~ > x1- n1 d d~ QCD=0 @2 
+INFO: Processing color information for process: s c~ > x1- n1 d d~ QCD=0 @2 
+INFO: Generating Helas calls for process: s d~ > x1+ n1 s u~ QCD=0 @2 
+INFO: Reusing existing color information for process: s d~ > x1+ n1 s u~ QCD=0 @2 
+INFO: Generating Helas calls for process: s d~ > x1- n1 c d~ QCD=0 @2 
+INFO: Processing color information for process: s d~ > x1- n1 c d~ QCD=0 @2 
+INFO: Generating Helas calls for process: s s~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Reusing existing color information for process: s s~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Helas calls for process: s s~ > x1- n1 u d~ QCD=0 @2 
+INFO: Processing color information for process: s s~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Helas calls for process: u~ c~ > x1- n1 u~ s~ QCD=0 @2 
+INFO: Processing color information for process: u~ c~ > x1- n1 u~ s~ QCD=0 @2 
+INFO: Generating Helas calls for process: u~ c~ > x1- n1 c~ d~ QCD=0 @2 
+INFO: Processing color information for process: u~ c~ > x1- n1 c~ d~ QCD=0 @2 
+INFO: Generating Helas calls for process: u~ s~ > x1+ n1 u~ c~ QCD=0 @2 
+INFO: Processing color information for process: u~ s~ > x1+ n1 u~ c~ QCD=0 @2 
+INFO: Generating Helas calls for process: u~ s~ > x1- n1 d~ s~ QCD=0 @2 
+INFO: Processing color information for process: u~ s~ > x1- n1 d~ s~ QCD=0 @2 
+INFO: Generating Helas calls for process: c~ d~ > x1+ n1 u~ c~ QCD=0 @2 
+INFO: Processing color information for process: c~ d~ > x1+ n1 u~ c~ QCD=0 @2 
+INFO: Generating Helas calls for process: c~ d~ > x1- n1 d~ s~ QCD=0 @2 
+INFO: Processing color information for process: c~ d~ > x1- n1 d~ s~ QCD=0 @2 
+INFO: Generating Helas calls for process: d~ s~ > x1+ n1 u~ s~ QCD=0 @2 
+INFO: Processing color information for process: d~ s~ > x1+ n1 u~ s~ QCD=0 @2 
+INFO: Generating Helas calls for process: d~ s~ > x1+ n1 c~ d~ QCD=0 @2 
+INFO: Processing color information for process: d~ s~ > x1+ n1 c~ d~ QCD=0 @2 
+INFO: Generating Helas calls for process: u u > x1+ x1+ d d QCD=0 @5 
+INFO: Processing color information for process: u u > x1+ x1+ d d QCD=0 @5 
+INFO: Generating Helas calls for process: u d~ > x1+ x1+ d u~ QCD=0 @5 
+INFO: Processing color information for process: u d~ > x1+ x1+ d u~ QCD=0 @5 
+INFO: Generating Helas calls for process: c c > x1+ x1+ s s QCD=0 @5 
+INFO: Reusing existing color information for process: c c > x1+ x1+ s s QCD=0 @5 
+INFO: Generating Helas calls for process: c s~ > x1+ x1+ s c~ QCD=0 @5 
+INFO: Reusing existing color information for process: c s~ > x1+ x1+ s c~ QCD=0 @5 
+INFO: Generating Helas calls for process: d d > x1- x1- u u QCD=0 @5 
+INFO: Processing color information for process: d d > x1- x1- u u QCD=0 @5 
+INFO: Generating Helas calls for process: d u~ > x1- x1- u d~ QCD=0 @5 
+INFO: Processing color information for process: d u~ > x1- x1- u d~ QCD=0 @5 
+INFO: Generating Helas calls for process: s s > x1- x1- c c QCD=0 @5 
+INFO: Reusing existing color information for process: s s > x1- x1- c c QCD=0 @5 
+INFO: Generating Helas calls for process: s c~ > x1- x1- c s~ QCD=0 @5 
+INFO: Reusing existing color information for process: s c~ > x1- x1- c s~ QCD=0 @5 
+INFO: Generating Helas calls for process: u~ u~ > x1- x1- d~ d~ QCD=0 @5 
+INFO: Processing color information for process: u~ u~ > x1- x1- d~ d~ QCD=0 @5 
+INFO: Generating Helas calls for process: c~ c~ > x1- x1- s~ s~ QCD=0 @5 
+INFO: Reusing existing color information for process: c~ c~ > x1- x1- s~ s~ QCD=0 @5 
+INFO: Generating Helas calls for process: d~ d~ > x1+ x1+ u~ u~ QCD=0 @5 
+INFO: Processing color information for process: d~ d~ > x1+ x1+ u~ u~ QCD=0 @5 
+INFO: Generating Helas calls for process: s~ s~ > x1+ x1+ c~ c~ QCD=0 @5 
+INFO: Reusing existing color information for process: s~ s~ > x1+ x1+ c~ c~ QCD=0 @5 
+INFO: Generating Helas calls for process: u u > x1+ x1- u u QCD=0 @5 
+INFO: Processing color information for process: u u > x1+ x1- u u QCD=0 @5 
+INFO: Generating Helas calls for process: u u~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Processing color information for process: u u~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Helas calls for process: c c > x1+ x1- c c QCD=0 @5 
+INFO: Reusing existing color information for process: c c > x1+ x1- c c QCD=0 @5 
+INFO: Generating Helas calls for process: c c~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Reusing existing color information for process: c c~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Helas calls for process: d d > x1+ x1- d d QCD=0 @5 
+INFO: Reusing existing color information for process: d d > x1+ x1- d d QCD=0 @5 
+INFO: Generating Helas calls for process: d d~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Reusing existing color information for process: d d~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Helas calls for process: s s > x1+ x1- s s QCD=0 @5 
+INFO: Reusing existing color information for process: s s > x1+ x1- s s QCD=0 @5 
+INFO: Generating Helas calls for process: s s~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Reusing existing color information for process: s s~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Helas calls for process: u~ u~ > x1+ x1- u~ u~ QCD=0 @5 
+INFO: Processing color information for process: u~ u~ > x1+ x1- u~ u~ QCD=0 @5 
+INFO: Generating Helas calls for process: c~ c~ > x1+ x1- c~ c~ QCD=0 @5 
+INFO: Reusing existing color information for process: c~ c~ > x1+ x1- c~ c~ QCD=0 @5 
+INFO: Generating Helas calls for process: d~ d~ > x1+ x1- d~ d~ QCD=0 @5 
+INFO: Reusing existing color information for process: d~ d~ > x1+ x1- d~ d~ QCD=0 @5 
+INFO: Generating Helas calls for process: s~ s~ > x1+ x1- s~ s~ QCD=0 @5 
+INFO: Reusing existing color information for process: s~ s~ > x1+ x1- s~ s~ QCD=0 @5 
+INFO: Generating Helas calls for process: u d > x1+ x1- u d QCD=0 @5 
+INFO: Processing color information for process: u d > x1+ x1- u d QCD=0 @5 
+INFO: Generating Helas calls for process: u u~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Processing color information for process: u u~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Helas calls for process: u d~ > x1+ x1- u d~ QCD=0 @5 
+INFO: Processing color information for process: u d~ > x1+ x1- u d~ QCD=0 @5 
+INFO: Generating Helas calls for process: c s > x1+ x1- c s QCD=0 @5 
+INFO: Reusing existing color information for process: c s > x1+ x1- c s QCD=0 @5 
+INFO: Generating Helas calls for process: c c~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Reusing existing color information for process: c c~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Helas calls for process: c s~ > x1+ x1- c s~ QCD=0 @5 
+INFO: Reusing existing color information for process: c s~ > x1+ x1- c s~ QCD=0 @5 
+INFO: Generating Helas calls for process: d u~ > x1+ x1- d u~ QCD=0 @5 
+INFO: Processing color information for process: d u~ > x1+ x1- d u~ QCD=0 @5 
+INFO: Generating Helas calls for process: d d~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Processing color information for process: d d~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Helas calls for process: s c~ > x1+ x1- s c~ QCD=0 @5 
+INFO: Reusing existing color information for process: s c~ > x1+ x1- s c~ QCD=0 @5 
+INFO: Generating Helas calls for process: s s~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Reusing existing color information for process: s s~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Helas calls for process: u~ d~ > x1+ x1- u~ d~ QCD=0 @5 
+INFO: Processing color information for process: u~ d~ > x1+ x1- u~ d~ QCD=0 @5 
+INFO: Generating Helas calls for process: c~ s~ > x1+ x1- c~ s~ QCD=0 @5 
+INFO: Reusing existing color information for process: c~ s~ > x1+ x1- c~ s~ QCD=0 @5 
+INFO: Generating Helas calls for process: u c > x1+ x1+ d s QCD=0 @5 
+INFO: Processing color information for process: u c > x1+ x1+ d s QCD=0 @5 
+INFO: Generating Helas calls for process: u d~ > x1+ x1+ s c~ QCD=0 @5 
+INFO: Processing color information for process: u d~ > x1+ x1+ s c~ QCD=0 @5 
+INFO: Generating Helas calls for process: u s~ > x1+ x1+ d c~ QCD=0 @5 
+INFO: Processing color information for process: u s~ > x1+ x1+ d c~ QCD=0 @5 
+INFO: Generating Helas calls for process: c d~ > x1+ x1+ s u~ QCD=0 @5 
+INFO: Processing color information for process: c d~ > x1+ x1+ s u~ QCD=0 @5 
+INFO: Generating Helas calls for process: c s~ > x1+ x1+ d u~ QCD=0 @5 
+INFO: Processing color information for process: c s~ > x1+ x1+ d u~ QCD=0 @5 
+INFO: Generating Helas calls for process: d s > x1- x1- u c QCD=0 @5 
+INFO: Processing color information for process: d s > x1- x1- u c QCD=0 @5 
+INFO: Generating Helas calls for process: d u~ > x1- x1- c s~ QCD=0 @5 
+INFO: Processing color information for process: d u~ > x1- x1- c s~ QCD=0 @5 
+INFO: Generating Helas calls for process: d c~ > x1- x1- u s~ QCD=0 @5 
+INFO: Processing color information for process: d c~ > x1- x1- u s~ QCD=0 @5 
+INFO: Generating Helas calls for process: s u~ > x1- x1- c d~ QCD=0 @5 
+INFO: Processing color information for process: s u~ > x1- x1- c d~ QCD=0 @5 
+INFO: Generating Helas calls for process: s c~ > x1- x1- u d~ QCD=0 @5 
+INFO: Processing color information for process: s c~ > x1- x1- u d~ QCD=0 @5 
+INFO: Generating Helas calls for process: u~ c~ > x1- x1- d~ s~ QCD=0 @5 
+INFO: Processing color information for process: u~ c~ > x1- x1- d~ s~ QCD=0 @5 
+INFO: Generating Helas calls for process: d~ s~ > x1+ x1+ u~ c~ QCD=0 @5 
+INFO: Processing color information for process: d~ s~ > x1+ x1+ u~ c~ QCD=0 @5 
+INFO: Generating Helas calls for process: u c > x1+ x1- u c QCD=0 @5 
+INFO: Processing color information for process: u c > x1+ x1- u c QCD=0 @5 
+INFO: Generating Helas calls for process: u s > x1+ x1- u s QCD=0 @5 
+INFO: Processing color information for process: u s > x1+ x1- u s QCD=0 @5 
+INFO: Generating Helas calls for process: u u~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Processing color information for process: u u~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Helas calls for process: u u~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Processing color information for process: u u~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Helas calls for process: u c~ > x1+ x1- u c~ QCD=0 @5 
+INFO: Processing color information for process: u c~ > x1+ x1- u c~ QCD=0 @5 
+INFO: Generating Helas calls for process: u s~ > x1+ x1- u s~ QCD=0 @5 
+INFO: Processing color information for process: u s~ > x1+ x1- u s~ QCD=0 @5 
+INFO: Generating Helas calls for process: c d > x1+ x1- c d QCD=0 @5 
+INFO: Reusing existing color information for process: c d > x1+ x1- c d QCD=0 @5 
+INFO: Generating Helas calls for process: c u~ > x1+ x1- c u~ QCD=0 @5 
+INFO: Processing color information for process: c u~ > x1+ x1- c u~ QCD=0 @5 
+INFO: Generating Helas calls for process: c c~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Processing color information for process: c c~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Helas calls for process: c c~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Reusing existing color information for process: c c~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Helas calls for process: c d~ > x1+ x1- c d~ QCD=0 @5 
+INFO: Reusing existing color information for process: c d~ > x1+ x1- c d~ QCD=0 @5 
+INFO: Generating Helas calls for process: d s > x1+ x1- d s QCD=0 @5 
+INFO: Reusing existing color information for process: d s > x1+ x1- d s QCD=0 @5 
+INFO: Generating Helas calls for process: d c~ > x1+ x1- d c~ QCD=0 @5 
+INFO: Processing color information for process: d c~ > x1+ x1- d c~ QCD=0 @5 
+INFO: Generating Helas calls for process: d d~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Processing color information for process: d d~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Helas calls for process: d d~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Reusing existing color information for process: d d~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Helas calls for process: d s~ > x1+ x1- d s~ QCD=0 @5 
+INFO: Reusing existing color information for process: d s~ > x1+ x1- d s~ QCD=0 @5 
+INFO: Generating Helas calls for process: s u~ > x1+ x1- s u~ QCD=0 @5 
+INFO: Reusing existing color information for process: s u~ > x1+ x1- s u~ QCD=0 @5 
+INFO: Generating Helas calls for process: s d~ > x1+ x1- s d~ QCD=0 @5 
+INFO: Reusing existing color information for process: s d~ > x1+ x1- s d~ QCD=0 @5 
+INFO: Generating Helas calls for process: s s~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Reusing existing color information for process: s s~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Helas calls for process: s s~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Reusing existing color information for process: s s~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Helas calls for process: u~ c~ > x1+ x1- u~ c~ QCD=0 @5 
+INFO: Processing color information for process: u~ c~ > x1+ x1- u~ c~ QCD=0 @5 
+INFO: Generating Helas calls for process: u~ s~ > x1+ x1- u~ s~ QCD=0 @5 
+INFO: Processing color information for process: u~ s~ > x1+ x1- u~ s~ QCD=0 @5 
+INFO: Generating Helas calls for process: c~ d~ > x1+ x1- c~ d~ QCD=0 @5 
+INFO: Reusing existing color information for process: c~ d~ > x1+ x1- c~ d~ QCD=0 @5 
+INFO: Generating Helas calls for process: d~ s~ > x1+ x1- d~ s~ QCD=0 @5 
+INFO: Reusing existing color information for process: d~ s~ > x1+ x1- d~ s~ QCD=0 @5 
+INFO: Generating Helas calls for process: u s > x1+ x1- c d QCD=0 @5 
+INFO: Processing color information for process: u s > x1+ x1- c d QCD=0 @5 
+INFO: Generating Helas calls for process: u c~ > x1+ x1- d s~ QCD=0 @5 
+INFO: Processing color information for process: u c~ > x1+ x1- d s~ QCD=0 @5 
+INFO: Generating Helas calls for process: u d~ > x1+ x1- c s~ QCD=0 @5 
+INFO: Processing color information for process: u d~ > x1+ x1- c s~ QCD=0 @5 
+INFO: Generating Helas calls for process: c d > x1+ x1- u s QCD=0 @5 
+INFO: Reusing existing color information for process: c d > x1+ x1- u s QCD=0 @5 
+INFO: Generating Helas calls for process: c u~ > x1+ x1- s d~ QCD=0 @5 
+INFO: Reusing existing color information for process: c u~ > x1+ x1- s d~ QCD=0 @5 
+INFO: Generating Helas calls for process: c s~ > x1+ x1- u d~ QCD=0 @5 
+INFO: Reusing existing color information for process: c s~ > x1+ x1- u d~ QCD=0 @5 
+INFO: Generating Helas calls for process: d u~ > x1+ x1- s c~ QCD=0 @5 
+INFO: Processing color information for process: d u~ > x1+ x1- s c~ QCD=0 @5 
+INFO: Generating Helas calls for process: d s~ > x1+ x1- u c~ QCD=0 @5 
+INFO: Processing color information for process: d s~ > x1+ x1- u c~ QCD=0 @5 
+INFO: Generating Helas calls for process: s c~ > x1+ x1- d u~ QCD=0 @5 
+INFO: Reusing existing color information for process: s c~ > x1+ x1- d u~ QCD=0 @5 
+INFO: Generating Helas calls for process: s d~ > x1+ x1- c u~ QCD=0 @5 
+INFO: Reusing existing color information for process: s d~ > x1+ x1- c u~ QCD=0 @5 
+INFO: Generating Helas calls for process: u~ s~ > x1+ x1- c~ d~ QCD=0 @5 
+INFO: Processing color information for process: u~ s~ > x1+ x1- c~ d~ QCD=0 @5 
+INFO: Generating Helas calls for process: c~ d~ > x1+ x1- u~ s~ QCD=0 @5 
+INFO: Reusing existing color information for process: c~ d~ > x1+ x1- u~ s~ QCD=0 @5 
+INFO: Creating files in directory P3_qq_n2n1qq 
+INFO: Generating Feynman diagrams for Process: u u > n2 n1 u u QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c c > n2 n1 c c QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d d > n2 n1 d d QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s s > n2 n1 s s QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u~ u~ > n2 n1 u~ u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c~ c~ > n2 n1 c~ c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d~ d~ > n2 n1 d~ d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s~ s~ > n2 n1 s~ s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u d > n2 n1 u d QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u d~ > n2 n1 u d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c s > n2 n1 c s QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c s~ > n2 n1 c s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d u~ > n2 n1 d u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s c~ > n2 n1 s c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u~ d~ > n2 n1 u~ d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c~ s~ > n2 n1 c~ s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u c > n2 n1 u c QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u s > n2 n1 u s QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u c~ > n2 n1 u c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u s~ > n2 n1 u s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c d > n2 n1 c d QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c u~ > n2 n1 c u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c d~ > n2 n1 c d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d s > n2 n1 d s QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d c~ > n2 n1 d c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n1 c c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n1 s s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d s~ > n2 n1 d s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s u~ > n2 n1 s u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s d~ > n2 n1 s d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n1 u u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n1 d d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u~ c~ > n2 n1 u~ c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u~ s~ > n2 n1 u~ s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c~ d~ > n2 n1 c~ d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d~ s~ > n2 n1 d~ s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u s > n2 n1 c d QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u c~ > n2 n1 d s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u d~ > n2 n1 c s~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c d > n2 n1 u s QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c u~ > n2 n1 s d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c s~ > n2 n1 u d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d u~ > n2 n1 s c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: d s~ > n2 n1 u c~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s c~ > n2 n1 d u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: s d~ > n2 n1 c u~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: u~ s~ > n2 n1 c~ d~ QCD=0 @3 
+INFO: Generating Feynman diagrams for Process: c~ d~ > n2 n1 u~ s~ QCD=0 @3 
+INFO: Finding symmetric diagrams for subprocess group qq_n2n1qq 
+INFO: Creating files in directory P4_qq_n2n2qq 
+INFO: Generating Feynman diagrams for Process: u u > n2 n2 u u QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c c > n2 n2 c c QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d d > n2 n2 d d QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s s > n2 n2 s s QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u~ u~ > n2 n2 u~ u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c~ c~ > n2 n2 c~ c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d~ d~ > n2 n2 d~ d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s~ s~ > n2 n2 s~ s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u d > n2 n2 u d QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u d~ > n2 n2 u d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c s > n2 n2 c s QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c s~ > n2 n2 c s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d u~ > n2 n2 d u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s c~ > n2 n2 s c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u~ d~ > n2 n2 u~ d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c~ s~ > n2 n2 c~ s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u c > n2 n2 u c QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u s > n2 n2 u s QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u u~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u c~ > n2 n2 u c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u s~ > n2 n2 u s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c d > n2 n2 c d QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c u~ > n2 n2 c u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c c~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c d~ > n2 n2 c d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d s > n2 n2 d s QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d c~ > n2 n2 d c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n2 c c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d d~ > n2 n2 s s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d s~ > n2 n2 d s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s u~ > n2 n2 s u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s d~ > n2 n2 s d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n2 u u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s s~ > n2 n2 d d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u~ c~ > n2 n2 u~ c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u~ s~ > n2 n2 u~ s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c~ d~ > n2 n2 c~ d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d~ s~ > n2 n2 d~ s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u s > n2 n2 c d QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u c~ > n2 n2 d s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u d~ > n2 n2 c s~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c d > n2 n2 u s QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c u~ > n2 n2 s d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c s~ > n2 n2 u d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d u~ > n2 n2 s c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: d s~ > n2 n2 u c~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s c~ > n2 n2 d u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: s d~ > n2 n2 c u~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: u~ s~ > n2 n2 c~ d~ QCD=0 @4 
+INFO: Generating Feynman diagrams for Process: c~ d~ > n2 n2 u~ s~ QCD=0 @4 
+INFO: Finding symmetric diagrams for subprocess group qq_n2n2qq 
+INFO: Creating files in directory P1_qq_x1pn2qq 
+INFO: Generating Feynman diagrams for Process: u u > x1+ n2 u d QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u d > x1+ n2 d d QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u d > x1- n2 u u QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u u~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n2 u u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n2 d d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c c > x1+ n2 c s QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c s > x1+ n2 s s QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c s > x1- n2 c c QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c c~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n2 c c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n2 s s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d d > x1- n2 u d QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n2 u u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n2 d d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s s > x1- n2 c s QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n2 c c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n2 s s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s s~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u~ u~ > x1- n2 u~ d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u~ d~ > x1+ n2 u~ u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u~ d~ > x1- n2 d~ d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c~ c~ > x1- n2 c~ s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c~ s~ > x1+ n2 c~ c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c~ s~ > x1- n2 s~ s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d~ d~ > x1+ n2 u~ d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s~ s~ > x1+ n2 c~ s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u c > x1+ n2 u s QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u c > x1+ n2 c d QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u s > x1+ n2 d s QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u s > x1- n2 u c QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u u~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u c~ > x1+ n2 d c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u c~ > x1- n2 u s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n2 c c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n2 s s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u s~ > x1+ n2 u c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u s~ > x1+ n2 d s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c d > x1+ n2 d s QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c d > x1- n2 u c QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c u~ > x1+ n2 s u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c u~ > x1- n2 c d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c c~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c d~ > x1+ n2 c u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c d~ > x1+ n2 s d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n2 u u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n2 d d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d s > x1- n2 u s QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d s > x1- n2 c d QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n2 c c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n2 s s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d c~ > x1- n2 u c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d c~ > x1- n2 d s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ n2 s c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d d~ > x1- n2 c s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d s~ > x1+ n2 d c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d s~ > x1- n2 u s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s u~ > x1- n2 c u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s u~ > x1- n2 s d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n2 u u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n2 d d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s d~ > x1+ n2 s u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s d~ > x1- n2 c d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ n2 d u~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: s s~ > x1- n2 u d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u~ c~ > x1- n2 u~ s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u~ c~ > x1- n2 c~ d~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u~ s~ > x1+ n2 u~ c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: u~ s~ > x1- n2 d~ s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c~ d~ > x1+ n2 u~ c~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: c~ d~ > x1- n2 d~ s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d~ s~ > x1+ n2 u~ s~ QCD=0 @1 
+INFO: Generating Feynman diagrams for Process: d~ s~ > x1+ n2 c~ d~ QCD=0 @1 
+INFO: Finding symmetric diagrams for subprocess group qq_x1pn2qq 
+INFO: Creating files in directory P2_qq_x1pn1qq 
+INFO: Generating Feynman diagrams for Process: u u > x1+ n1 u d QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u d > x1+ n1 d d QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u d > x1- n1 u u QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u u~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n1 u u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n1 d d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c c > x1+ n1 c s QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c s > x1+ n1 s s QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c s > x1- n1 c c QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c c~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n1 c c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n1 s s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d d > x1- n1 u d QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n1 u u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n1 d d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d d~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s s > x1- n1 c s QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n1 c c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n1 s s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s s~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u~ u~ > x1- n1 u~ d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u~ d~ > x1+ n1 u~ u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u~ d~ > x1- n1 d~ d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c~ c~ > x1- n1 c~ s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c~ s~ > x1+ n1 c~ c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c~ s~ > x1- n1 s~ s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d~ d~ > x1+ n1 u~ d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s~ s~ > x1+ n1 c~ s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u c > x1+ n1 u s QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u c > x1+ n1 c d QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u s > x1+ n1 d s QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u s > x1- n1 u c QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u u~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u c~ > x1+ n1 d c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u c~ > x1- n1 u s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n1 c c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ n1 s s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u s~ > x1+ n1 u c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u s~ > x1+ n1 d s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c d > x1+ n1 d s QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c d > x1- n1 u c QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c u~ > x1+ n1 s u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c u~ > x1- n1 c d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c c~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c d~ > x1+ n1 c u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c d~ > x1+ n1 s d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n1 u u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ n1 d d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d s > x1- n1 u s QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d s > x1- n1 c d QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n1 c c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- n1 s s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d c~ > x1- n1 u c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d c~ > x1- n1 d s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ n1 s c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d d~ > x1- n1 c s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d s~ > x1+ n1 d c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d s~ > x1- n1 u s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s u~ > x1- n1 c u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s u~ > x1- n1 s d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n1 u u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- n1 d d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s d~ > x1+ n1 s u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s d~ > x1- n1 c d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ n1 d u~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: s s~ > x1- n1 u d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u~ c~ > x1- n1 u~ s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u~ c~ > x1- n1 c~ d~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u~ s~ > x1+ n1 u~ c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: u~ s~ > x1- n1 d~ s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c~ d~ > x1+ n1 u~ c~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: c~ d~ > x1- n1 d~ s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d~ s~ > x1+ n1 u~ s~ QCD=0 @2 
+INFO: Generating Feynman diagrams for Process: d~ s~ > x1+ n1 c~ d~ QCD=0 @2 
+INFO: Finding symmetric diagrams for subprocess group qq_x1pn1qq 
+INFO: Creating files in directory P5_qq_x1px1pqq 
+INFO: Generating Feynman diagrams for Process: u u > x1+ x1+ d d QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ x1+ d u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c c > x1+ x1+ s s QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ x1+ s c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d d > x1- x1- u u QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- x1- u d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s s > x1- x1- c c QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- x1- c s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u~ u~ > x1- x1- d~ d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c~ c~ > x1- x1- s~ s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d~ d~ > x1+ x1+ u~ u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s~ s~ > x1+ x1+ c~ c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u u > x1+ x1- u u QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c c > x1+ x1- c c QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d d > x1+ x1- d d QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s s > x1+ x1- s s QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u~ u~ > x1+ x1- u~ u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c~ c~ > x1+ x1- c~ c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d~ d~ > x1+ x1- d~ d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s~ s~ > x1+ x1- s~ s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u d > x1+ x1- u d QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ x1- u d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c s > x1+ x1- c s QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ x1- c s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d u~ > x1+ x1- d u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s c~ > x1+ x1- s c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u~ d~ > x1+ x1- u~ d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c~ s~ > x1+ x1- c~ s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u c > x1+ x1+ d s QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ x1+ s c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u s~ > x1+ x1+ d c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c d~ > x1+ x1+ s u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ x1+ d u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d s > x1- x1- u c QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d u~ > x1- x1- c s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d c~ > x1- x1- u s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s u~ > x1- x1- c d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s c~ > x1- x1- u d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u~ c~ > x1- x1- d~ s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d~ s~ > x1+ x1+ u~ c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u c > x1+ x1- u c QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u s > x1+ x1- u s QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u u~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u c~ > x1+ x1- u c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u s~ > x1+ x1- u s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c d > x1+ x1- c d QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c u~ > x1+ x1- c u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c c~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c d~ > x1+ x1- c d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d s > x1+ x1- d s QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d c~ > x1+ x1- d c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ x1- c c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d d~ > x1+ x1- s s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d s~ > x1+ x1- d s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s u~ > x1+ x1- s u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s d~ > x1+ x1- s d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ x1- u u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s s~ > x1+ x1- d d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u~ c~ > x1+ x1- u~ c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u~ s~ > x1+ x1- u~ s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c~ d~ > x1+ x1- c~ d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d~ s~ > x1+ x1- d~ s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u s > x1+ x1- c d QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u c~ > x1+ x1- d s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u d~ > x1+ x1- c s~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c d > x1+ x1- u s QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c u~ > x1+ x1- s d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c s~ > x1+ x1- u d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d u~ > x1+ x1- s c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: d s~ > x1+ x1- u c~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s c~ > x1+ x1- d u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: s d~ > x1+ x1- c u~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: u~ s~ > x1+ x1- c~ d~ QCD=0 @5 
+INFO: Generating Feynman diagrams for Process: c~ d~ > x1+ x1- u~ s~ QCD=0 @5 
+INFO: Finding symmetric diagrams for subprocess group qq_x1px1pqq 
+Generated helas calls for 364 subprocesses (64328 diagrams) in 115.356 s
+Wrote files for 100034 helas calls in 315.603 s
+ALOHA: aloha creates FFV1 routines
+ALOHA: aloha creates FFS2 routines
+ALOHA: aloha creates FFS1 routines
+ALOHA: aloha creates VSS1 routines
+ALOHA: aloha creates FFV6 routines
+ALOHA: aloha creates FFS4 routines
+ALOHA: aloha creates VVV1 routines
+ALOHA: aloha creates FFV2 routines
+ALOHA: aloha creates FFV4 routines
+ALOHA: aloha creates FFV3 routines
+ALOHA: aloha creates FFV5 routines
+ALOHA: aloha creates VVS1 routines
+save configuration file to /home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate web pages 
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "es_CO.UTF-8",
+	LC_MONETARY = "es_CO.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_ADDRESS = "es_CO.UTF-8",
+	LC_TELEPHONE = "es_CO.UTF-8",
+	LC_NAME = "es_CO.UTF-8",
+	LC_MEASUREMENT = "es_CO.UTF-8",
+	LC_IDENTIFICATION = "es_CO.UTF-8",
+	LC_NUMERIC = "es_CO.UTF-8",
+	LC_PAPER = "es_CO.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "es_CO.UTF-8",
+	LC_MONETARY = "es_CO.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_ADDRESS = "es_CO.UTF-8",
+	LC_TELEPHONE = "es_CO.UTF-8",
+	LC_NAME = "es_CO.UTF-8",
+	LC_MEASUREMENT = "es_CO.UTF-8",
+	LC_IDENTIFICATION = "es_CO.UTF-8",
+	LC_NUMERIC = "es_CO.UTF-8",
+	LC_PAPER = "es_CO.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "es_CO.UTF-8",
+	LC_MONETARY = "es_CO.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_ADDRESS = "es_CO.UTF-8",
+	LC_TELEPHONE = "es_CO.UTF-8",
+	LC_NAME = "es_CO.UTF-8",
+	LC_MEASUREMENT = "es_CO.UTF-8",
+	LC_IDENTIFICATION = "es_CO.UTF-8",
+	LC_NUMERIC = "es_CO.UTF-8",
+	LC_PAPER = "es_CO.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("C.UTF-8").
+Output to directory /home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50 done.
+Type "launch" to generate events from this process, or see
+/home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/README
+Run "open index.html" to see more information about this process.
+launch /home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.3.py3             2020-06-28         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/Cards/me5_configuration.txt  
+INFO: load configuration from /home/adminuniandes/Software/MG5_aMC_v2_7_3_py3/input/mg5_configuration.txt  
+INFO: load configuration from /home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+generate_events run_01
+set mneu1 50
+[1mINFO: modify param_card information BLOCK mass with id (1000022,) set to 50.0 [0m
+set mneu2 100
+[1mINFO: modify param_card information BLOCK mass with id (1000023,) set to 100.0 [0m
+set mch1 75
+[1mINFO: modify param_card information BLOCK mass with id (1000024,) set to 75.0 [0m
+set nevents 1000
+[1mINFO: modify parameter nevents of the run_card.dat to 1000 [0m
+set deltaeta 3.8
+[1mINFO: modify parameter deltaeta of the run_card.dat to 3.8 [0m
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param : [32mparam_card.dat[0m                                 |
+|  [31m2[0m. run   : [32mrun_card.dat[0m                                   |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, enter path]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse 0 value[0m
+INFO: Update the dependent parameter of the param_card.dat 
+[1;34mWARNING: Unknow type of information in the card: upmns,vckm,snumix [0m
+Generating 1000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+[1;34mNot able to open file /home/adminuniandes/genSignalAndXSection/results/xSection/n2_100_ch1_75_n1_50/crossx.html since no program configured.Please set one in ./input/mg5_configuration.txt[0m
+compile Source Directory
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P3_qq_n2n1qq  
+INFO:     P4_qq_n2n2qq  
+INFO:     P1_qq_x1pn2qq  
+INFO:     P2_qq_x1pn1qq  
+INFO:     P5_qq_x1px1pqq  
+INFO:  Idle: 7147,  Running: 96,  Completed: 3035 [  0.033s  ] 
+INFO:  Idle: 7146,  Running: 96,  Completed: 3036 [  0.16s  ] 
+INFO:  Idle: 7135,  Running: 96,  Completed: 3047 [  3.6s  ] 
+INFO:  Idle: 7124,  Running: 96,  Completed: 3058 [  6.9s  ] 
+INFO:  Idle: 7114,  Running: 96,  Completed: 3068 [  10.3s  ] 
+INFO:  Idle: 7099,  Running: 96,  Completed: 3083 [  13.8s  ] 
+INFO:  Idle: 7093,  Running: 96,  Completed: 3089 [  17.3s  ] 
+INFO:  Idle: 7085,  Running: 96,  Completed: 3097 [  20.8s  ] 
+INFO:  Idle: 7070,  Running: 96,  Completed: 3112 [  24.2s  ] 
+INFO:  Idle: 7058,  Running: 96,  Completed: 3124 [  27.3s  ] 
+INFO:  Idle: 7040,  Running: 96,  Completed: 3142 [  31.4s  ] 
+INFO:  Idle: 7014,  Running: 96,  Completed: 3168 [  34.7s  ] 
+INFO:  Idle: 6996,  Running: 96,  Completed: 3186 [  37.8s  ] 
+INFO:  Idle: 6983,  Running: 96,  Completed: 3199 [  40.9s  ] 
+INFO:  Idle: 6968,  Running: 96,  Completed: 3214 [  44.1s  ] 
+INFO:  Idle: 6953,  Running: 96,  Completed: 3229 [  47.1s  ] 
+INFO:  Idle: 6936,  Running: 96,  Completed: 3246 [  50.4s  ] 
+INFO:  Idle: 6922,  Running: 96,  Completed: 3260 [  53.7s  ] 
+INFO:  Idle: 6908,  Running: 96,  Completed: 3274 [  56.8s  ] 
+INFO:  Idle: 6896,  Running: 96,  Completed: 3286 [  1m 0s  ] 
+INFO:  Idle: 6888,  Running: 96,  Completed: 3294 [  1m 3s  ] 
+INFO:  Idle: 6880,  Running: 96,  Completed: 3302 [  1m 6s  ] 
+INFO:  Idle: 6865,  Running: 96,  Completed: 3317 [  1m 10s  ] 
+INFO:  Idle: 6846,  Running: 96,  Completed: 3336 [  1m 13s  ] 
+INFO:  Idle: 6840,  Running: 96,  Completed: 3342 [  1m 16s  ] 
+INFO:  Idle: 6823,  Running: 96,  Completed: 3359 [  1m 19s  ] 
+INFO:  Idle: 6816,  Running: 96,  Completed: 3366 [  1m 22s  ] 
+INFO:  Idle: 6811,  Running: 96,  Completed: 3371 [  1m 27s  ] 
+INFO:  Idle: 6808,  Running: 96,  Completed: 3374 [  1m 30s  ] 
+INFO:  Idle: 6806,  Running: 96,  Completed: 3376 [  1m 34s  ] 
+INFO:  Idle: 6803,  Running: 96,  Completed: 3379 [  1m 38s  ] 
+INFO:  Idle: 6800,  Running: 96,  Completed: 3382 [  1m 41s  ] 
+INFO:  Idle: 6797,  Running: 96,  Completed: 3385 [  1m 45s  ] 
+INFO:  Idle: 6791,  Running: 96,  Completed: 3391 [  1m 48s  ] 
+INFO:  Idle: 6783,  Running: 96,  Completed: 3399 [  1m 53s  ] 
+INFO:  Idle: 6777,  Running: 96,  Completed: 3405 [  1m 57s  ] 
+INFO:  Idle: 6768,  Running: 96,  Completed: 3414 [  2m 0s  ] 
+INFO:  Idle: 6763,  Running: 96,  Completed: 3419 [  2m 3s  ] 
+INFO:  Idle: 6757,  Running: 96,  Completed: 3425 [  2m 6s  ] 
+INFO:  Idle: 6743,  Running: 96,  Completed: 3439 [  2m 9s  ] 
+INFO:  Idle: 6729,  Running: 96,  Completed: 3453 [  2m 13s  ] 
+INFO:  Idle: 6721,  Running: 96,  Completed: 3461 [  2m 17s  ] 
+INFO:  Idle: 6714,  Running: 96,  Completed: 3468 [  2m 20s  ] 
+INFO:  Idle: 6709,  Running: 96,  Completed: 3473 [  2m 24s  ] 
+INFO:  Idle: 6695,  Running: 96,  Completed: 3487 [  2m 27s  ] 
+INFO:  Idle: 6686,  Running: 96,  Completed: 3496 [  2m 30s  ] 
+INFO:  Idle: 6680,  Running: 96,  Completed: 3502 [  2m 33s  ] 
+INFO:  Idle: 6673,  Running: 96,  Completed: 3509 [  2m 37s  ] 
+INFO:  Idle: 6668,  Running: 96,  Completed: 3514 [  2m 41s  ] 
+INFO:  Idle: 6664,  Running: 96,  Completed: 3518 [  2m 45s  ] 
+INFO:  Idle: 6660,  Running: 96,  Completed: 3522 [  2m 49s  ] 
+INFO:  Idle: 6652,  Running: 96,  Completed: 3530 [  2m 53s  ] 
+INFO:  Idle: 6648,  Running: 96,  Completed: 3534 [  2m 56s  ] 
+INFO:  Idle: 6642,  Running: 96,  Completed: 3540 [  2m 59s  ] 
+INFO:  Idle: 6634,  Running: 96,  Completed: 3548 [  3m 2s  ] 
+INFO:  Idle: 6623,  Running: 96,  Completed: 3559 [  3m 5s  ] 
+INFO:  Idle: 6617,  Running: 96,  Completed: 3565 [  3m 10s  ] 
+INFO:  Idle: 6604,  Running: 96,  Completed: 3578 [  3m 13s  ] 
+INFO:  Idle: 6596,  Running: 96,  Completed: 3586 [  3m 16s  ] 
+INFO:  Idle: 6589,  Running: 96,  Completed: 3593 [  3m 19s  ] 
+INFO:  Idle: 6571,  Running: 96,  Completed: 3611 [  3m 23s  ] 
+INFO:  Idle: 6556,  Running: 96,  Completed: 3626 [  3m 27s  ] 
+INFO:  Idle: 6551,  Running: 96,  Completed: 3631 [  3m 30s  ] 
+INFO:  Idle: 6547,  Running: 96,  Completed: 3635 [  3m 35s  ] 
+INFO:  Idle: 6545,  Running: 96,  Completed: 3637 [  3m 39s  ] 
+INFO:  Idle: 6542,  Running: 96,  Completed: 3640 [  3m 42s  ] 
+INFO:  Idle: 6531,  Running: 96,  Completed: 3651 [  3m 46s  ] 
+INFO:  Idle: 6525,  Running: 96,  Completed: 3657 [  3m 50s  ] 
+INFO:  Idle: 6518,  Running: 96,  Completed: 3664 [  3m 55s  ] 
+INFO:  Idle: 6514,  Running: 96,  Completed: 3668 [  3m 58s  ] 
+INFO:  Idle: 6509,  Running: 96,  Completed: 3673 [  4m 2s  ] 
+INFO:  Idle: 6502,  Running: 96,  Completed: 3680 [  4m 5s  ] 
+INFO:  Idle: 6493,  Running: 96,  Completed: 3689 [  4m 8s  ] 
+INFO:  Idle: 6483,  Running: 96,  Completed: 3699 [  4m 11s  ] 
+INFO:  Idle: 6472,  Running: 96,  Completed: 3710 [  4m 14s  ] 
+INFO:  Idle: 6459,  Running: 96,  Completed: 3723 [  4m 17s  ] 
+INFO:  Idle: 6451,  Running: 96,  Completed: 3731 [  4m 20s  ] 
+INFO:  Idle: 6439,  Running: 96,  Completed: 3743 [  4m 24s  ] 
+INFO:  Idle: 6433,  Running: 96,  Completed: 3749 [  4m 27s  ] 
+INFO:  Idle: 6421,  Running: 96,  Completed: 3761 [  4m 30s  ] 
+INFO:  Idle: 6417,  Running: 96,  Completed: 3765 [  4m 34s  ] 
+INFO:  Idle: 6408,  Running: 96,  Completed: 3774 [  4m 37s  ] 
+INFO:  Idle: 6400,  Running: 96,  Completed: 3782 [  4m 40s  ] 
+INFO:  Idle: 6399,  Running: 96,  Completed: 3783 [  4m 44s  ] 
+INFO:  Idle: 6393,  Running: 96,  Completed: 3789 [  4m 48s  ] 
+INFO:  Idle: 6389,  Running: 96,  Completed: 3793 [  4m 51s  ] 
+INFO:  Idle: 6382,  Running: 96,  Completed: 3800 [  4m 54s  ] 
+INFO:  Idle: 6372,  Running: 96,  Completed: 3810 [  4m 57s  ] 
+INFO:  Idle: 6359,  Running: 96,  Completed: 3823 [  5m 1s  ] 
+INFO:  Idle: 6345,  Running: 96,  Completed: 3837 [  5m 4s  ] 
+INFO:  Idle: 6341,  Running: 96,  Completed: 3841 [  5m 7s  ] 
+INFO:  Idle: 6323,  Running: 96,  Completed: 3859 [  5m 10s  ] 
+INFO:  Idle: 6312,  Running: 96,  Completed: 3870 [  5m 14s  ] 
+INFO:  Idle: 6304,  Running: 96,  Completed: 3878 [  5m 17s  ] 
+INFO:  Idle: 6293,  Running: 96,  Completed: 3889 [  5m 20s  ] 
+INFO:  Idle: 6281,  Running: 96,  Completed: 3901 [  5m 23s  ] 
+INFO:  Idle: 6270,  Running: 96,  Completed: 3912 [  5m 26s  ] 
+INFO:  Idle: 6267,  Running: 96,  Completed: 3915 [  5m 29s  ] 
+INFO:  Idle: 6260,  Running: 96,  Completed: 3922 [  5m 33s  ] 
+INFO:  Idle: 6250,  Running: 96,  Completed: 3932 [  5m 37s  ] 
+INFO:  Idle: 6239,  Running: 96,  Completed: 3943 [  5m 40s  ] 
+INFO:  Idle: 6230,  Running: 96,  Completed: 3952 [  5m 43s  ] 
+INFO:  Idle: 6217,  Running: 96,  Completed: 3965 [  5m 46s  ] 
+INFO:  Idle: 6206,  Running: 96,  Completed: 3976 [  5m 50s  ] 
+INFO:  Idle: 6192,  Running: 96,  Completed: 3990 [  5m 53s  ] 
+INFO:  Idle: 6178,  Running: 96,  Completed: 4004 [  5m 56s  ] 
+INFO:  Idle: 6170,  Running: 96,  Completed: 4012 [  5m 59s  ] 
+INFO:  Idle: 6163,  Running: 96,  Completed: 4019 [  6m 3s  ] 
+INFO:  Idle: 6154,  Running: 96,  Completed: 4028 [  6m 7s  ] 
+INFO:  Idle: 6145,  Running: 96,  Completed: 4037 [  6m 10s  ] 
+INFO:  Idle: 6135,  Running: 96,  Completed: 4047 [  6m 13s  ] 
+INFO:  Idle: 6125,  Running: 96,  Completed: 4057 [  6m 16s  ] 
+INFO:  Idle: 6114,  Running: 96,  Completed: 4068 [  6m 20s  ] 
+INFO:  Idle: 6100,  Running: 96,  Completed: 4082 [  6m 23s  ] 
+INFO:  Idle: 6092,  Running: 96,  Completed: 4090 [  6m 26s  ] 
+INFO:  Idle: 6077,  Running: 96,  Completed: 4105 [  6m 30s  ] 
+INFO:  Idle: 6066,  Running: 96,  Completed: 4116 [  6m 33s  ] 
+INFO:  Idle: 6053,  Running: 96,  Completed: 4129 [  6m 36s  ] 
+INFO:  Idle: 6041,  Running: 96,  Completed: 4141 [  6m 40s  ] 
+INFO:  Idle: 6023,  Running: 96,  Completed: 4159 [  6m 44s  ] 
+INFO:  Idle: 6012,  Running: 96,  Completed: 4170 [  6m 48s  ] 
+INFO:  Idle: 6002,  Running: 96,  Completed: 4180 [  6m 51s  ] 
+INFO:  Idle: 5987,  Running: 96,  Completed: 4195 [  6m 54s  ] 
+INFO:  Idle: 5983,  Running: 96,  Completed: 4199 [  6m 57s  ] 
+INFO:  Idle: 5977,  Running: 96,  Completed: 4205 [  7m 0s  ] 
+INFO:  Idle: 5962,  Running: 96,  Completed: 4220 [  7m 4s  ] 
+INFO:  Idle: 5946,  Running: 96,  Completed: 4236 [  7m 8s  ] 
+INFO:  Idle: 5931,  Running: 96,  Completed: 4251 [  7m 11s  ] 
+INFO:  Idle: 5921,  Running: 96,  Completed: 4261 [  7m 14s  ] 
+INFO:  Idle: 5912,  Running: 96,  Completed: 4270 [  7m 19s  ] 
+INFO:  Idle: 5903,  Running: 96,  Completed: 4279 [  7m 22s  ] 
+INFO:  Idle: 5885,  Running: 96,  Completed: 4297 [  7m 25s  ] 
+INFO:  Idle: 5873,  Running: 96,  Completed: 4309 [  7m 29s  ] 
+INFO:  Idle: 5860,  Running: 96,  Completed: 4322 [  7m 33s  ] 
+INFO:  Idle: 5846,  Running: 96,  Completed: 4336 [  7m 36s  ] 
+INFO:  Idle: 5837,  Running: 96,  Completed: 4345 [  7m 39s  ] 
+INFO:  Idle: 5824,  Running: 96,  Completed: 4358 [  7m 43s  ] 
+INFO:  Idle: 5816,  Running: 96,  Completed: 4366 [  7m 46s  ] 
+INFO:  Idle: 5807,  Running: 96,  Completed: 4375 [  7m 49s  ] 
+INFO:  Idle: 5798,  Running: 96,  Completed: 4384 [  7m 52s  ] 
+INFO:  Idle: 5787,  Running: 96,  Completed: 4395 [  7m 55s  ] 
+INFO:  Idle: 5781,  Running: 96,  Completed: 4401 [  7m 59s  ] 
+INFO:  Idle: 5772,  Running: 96,  Completed: 4410 [  8m 2s  ] 
+INFO:  Idle: 5766,  Running: 96,  Completed: 4416 [  8m 6s  ] 
+INFO:  Idle: 5754,  Running: 96,  Completed: 4428 [  8m 9s  ] 
+INFO:  Idle: 5738,  Running: 96,  Completed: 4444 [  8m 12s  ] 
+INFO:  Idle: 5720,  Running: 96,  Completed: 4462 [  8m 15s  ] 
+INFO:  Idle: 5703,  Running: 96,  Completed: 4479 [  8m 18s  ] 
+INFO:  Idle: 5686,  Running: 96,  Completed: 4496 [  8m 21s  ] 
+INFO:  Idle: 5678,  Running: 96,  Completed: 4504 [  8m 25s  ] 
+INFO:  Idle: 5665,  Running: 96,  Completed: 4517 [  8m 28s  ] 
+INFO:  Idle: 5655,  Running: 96,  Completed: 4527 [  8m 31s  ] 
+INFO:  Idle: 5645,  Running: 96,  Completed: 4537 [  8m 34s  ] 
+INFO:  Idle: 5634,  Running: 96,  Completed: 4548 [  8m 37s  ] 
+INFO:  Idle: 5627,  Running: 96,  Completed: 4555 [  8m 41s  ] 
+INFO:  Idle: 5617,  Running: 96,  Completed: 4565 [  8m 45s  ] 
+INFO:  Idle: 5603,  Running: 96,  Completed: 4579 [  8m 48s  ] 
+INFO:  Idle: 5586,  Running: 96,  Completed: 4596 [  8m 51s  ] 
+INFO:  Idle: 5570,  Running: 96,  Completed: 4612 [  8m 54s  ] 
+INFO:  Idle: 5557,  Running: 96,  Completed: 4625 [  8m 57s  ] 
+INFO:  Idle: 5543,  Running: 96,  Completed: 4639 [  9m 0s  ] 
+INFO:  Idle: 5535,  Running: 96,  Completed: 4647 [  9m 4s  ] 
+INFO:  Idle: 5522,  Running: 96,  Completed: 4660 [  9m 7s  ] 
+INFO:  Idle: 5511,  Running: 96,  Completed: 4671 [  9m 10s  ] 
+INFO:  Idle: 5502,  Running: 96,  Completed: 4680 [  9m 13s  ] 
+INFO:  Idle: 5494,  Running: 96,  Completed: 4688 [  9m 16s  ] 
+INFO:  Idle: 5481,  Running: 96,  Completed: 4701 [  9m 19s  ] 
+INFO:  Idle: 5468,  Running: 96,  Completed: 4714 [  9m 22s  ] 
+INFO:  Idle: 5459,  Running: 96,  Completed: 4723

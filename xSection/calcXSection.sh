@@ -12,11 +12,15 @@ n1=$3
 
 echo Using n2 = $n2, ch1 = $ch1 and n1 = $n1
 
-currentFolder=/home/aflorez/genSignalAndXSection/xSection/
-outputFolder=/home/aflorez/genSignalAndXSection/results/xSection/n2_${n2}_ch1_${ch1}_n1_${n1}/
+currentFolder=/home/adminuniandes/genSignalAndXSection/xSection/
+outputFolder=/home/adminuniandes/genSignalAndXSection/results/xSection/n2_${n2}_ch1_${ch1}_n1_${n1}/
 
 # create mg5 file
+rm ${currentFolder}currentRun/*
+
 cp ${currentFolder}templates/standardMgFile.mg5 ${currentFolder}currentRun/mgFile.mg5
+#cp ${currentFolder}templates/run_card.dat ${currentFolder}currentRun/run_card.dat
+#cp ${currentFolder}templates/standardParamCard.dat ${currentFolder}currentRun/param_card.dat
 
 # create ouput folder
 mkdir -p $outputFolder 
@@ -27,7 +31,8 @@ echo "launch ${outputFolder}" >> ${currentFolder}currentRun/mgFile.mg5
 echo "set mneu1 ${n1}" >> ${currentFolder}currentRun/mgFile.mg5
 echo "set mneu2 ${n2}" >> ${currentFolder}currentRun/mgFile.mg5
 echo "set mch1 ${ch1}" >> ${currentFolder}currentRun/mgFile.mg5
-echo "set nevents 10000" >> ${currentFolder}currentRun/mgFile.mg5
+echo "set nevents 1000" >> ${currentFolder}currentRun/mgFile.mg5
+echo "set deltaeta 3.8" >> ${currentFolder}currentRun/mgFile.mg5
 
 #log the output for post processing
 echo "running mg5_aMC ${currentFolder}currentRun/mgFile.mg5"
